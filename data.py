@@ -14,7 +14,7 @@ def get_labelled_data(lang: str, filename: str):
         for word_label in words_labels:
             word_label_arr = word_label.split(' ')
             words.append(word_label_arr[0])
-            labels.append(convert_label(word_label_arr[1]))
+            labels.append(convert_label(word_label_arr[1], toInt=True))
         x.append(words)
         y.append(labels)
 
@@ -33,16 +33,12 @@ def get_unlabelled_data(lang: str, filename: str):
 
     return x
 
+def conversions():
+    return {"O":0, "B-positive":1, "B-negative":2, "B-neutral":3, "I-positive":4, "I-negative":5, "I-neutral":6, "STOP":998, "START":999}
 
-def convert_label(y: str):
-    if y == "O": y = 0
-    elif y == "B-positive": y = 1
-    elif y == "B-negative": y = 2
-    elif y == "B-neutral": y = 3
-    elif y == "I-positive": y = 4
-    elif y == "I-negative": y = 5
-    elif y == "I-neutral": y = 6
-    return y
+def convert_label(y: str, toInt: bool):
+    
+    return conversions()[y]
 
 
 # USAGE
@@ -60,3 +56,4 @@ def export_predictions(x_val: list, predictions: list, lang: str):
         out += '\n'
     
     f.write(out)
+

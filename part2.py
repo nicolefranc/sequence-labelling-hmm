@@ -6,6 +6,7 @@ class part2:
         self.x_train, self.y_train = get_labelled_data(lang=lang, filename="train")
         self.x_val = get_unlabelled_data(lang=lang, filename="dev.in")
         self.transition_x_given_y = {}
+        self.states_dict = conversions()
 
     def transition_training(self):
         # dictionary format: {yi-1:{(yi-1,yi):frequency}
@@ -26,8 +27,6 @@ class part2:
                     yi_1 = self.y_train[i][j]
                     yi_1_yi = (yi_1,stop)
 
-                
-
                 #add start
                 if j == 0:
                     yi_1 = start
@@ -45,6 +44,11 @@ class part2:
                     self.transition_x_given_y[yi_1] = {yi_1_yi:1}
 
         return self.transition_x_given_y
+
+    def single_viterbi(self, inp_seq, emission_dict, transition_dict):
+        #initialise a path prob matrix
+        prob_matrix = [[0]*len(inp_seq) for i in range(len(self.states_dict))]
+        for i in range(len(self.states_dict)):
 
 
 

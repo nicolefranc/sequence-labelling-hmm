@@ -57,7 +57,6 @@ class part1:
         
         return self.emission_x_given_y
 
-
 if __name__ == "__main__":
     part1 = part1("es")
     emission_x_given_y = part1.emission_training()
@@ -68,12 +67,6 @@ if __name__ == "__main__":
             y_i.append(part1.get_argmax_emission_x_given_y(emission_x_given_y, word))
         listofpredictions.append(y_i)
     
-
     ## Export predictions and print
     preds = export_predictions(part1.get_x_val(), listofpredictions, 'es')
     print(preds)
-
-    
-
-    
-
