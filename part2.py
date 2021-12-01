@@ -1,4 +1,5 @@
 from data import *
+from part1 import *
 
 class part2:
 
@@ -7,6 +8,12 @@ class part2:
         self.x_val = get_unlabelled_data(lang=lang, filename="dev.in")
         self.transition_x_given_y = {}
         self.states_dict = conversions()
+
+    def get_transmission(self,transmission_x_given_y, x, y):
+        if x in transmission_x_given_y[y].keys():
+            return transmission_x_given_y[y][x]/sum(transmission_x_given_y[y].values())
+        else:
+            print("No such state")
 
     def transition_training(self):
         # dictionary format: {yi-1:{(yi-1,yi):frequency}
@@ -45,10 +52,13 @@ class part2:
 
         return self.transition_x_given_y
 
-    def single_viterbi(self, inp_seq, emission_dict, transition_dict):
+    def pi_k_v(self, prev_pi, x_k, u_v, emission_class, emission_dict, transition_dict):
         #initialise a path prob matrix
-        prob_matrix = [[0]*len(inp_seq) for i in range(len(self.states_dict))]
-        for i in range(len(self.states_dict)):
+        emission = emission_class.get_emission(emission_dict, u_v[0], x_k)
+        transmission = self.get_transmission(transition_dict,u_v, u_v[0])
+
+        return prev_pi*emission*transmission
+
 
 
 
