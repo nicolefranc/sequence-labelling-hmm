@@ -59,7 +59,47 @@ class part2:
 
         return prev_pi*emission*transmission
 
+    def argmax(self,listt):
+        return argmax, indice
 
+    def viterbi(self, emission_class):
+        # initialise a matrix that is of no.of states (row) x len of input sequence (col)
+        viterbi_lookup = [ [0]*len(self.states_dict) for i in range(len(self.x_train))]
+
+        #perform training
+        emission_dict = emission_class.emission_training()
+        transition_dict = self.transition_training()
+        prev_pi = None
+        prev_state = None #ToDo: change this to a list
+
+        for j in range(len(self.x_train)):
+            
+            for u in range(len(self.states_dict)):
+                if j == 0:
+                    #we dont care about 0 -> START
+                    #we just begin at the 1st input, START -> u and consider for every state there is
+                    #in this case the prev_pi is 1
+                    prev_pi = 1
+                    x_k = self.x_train[j]
+                    u_v = (self.states_dict["START"], u)
+                    pi_k_v = self.pi_k_v(prev_pi, x_k, u_v, emission_class, emission_dict, transition_dict)
+                    viterbi_lookup[j][u] = pi_k_v
+
+                if j == len(self.states_dict)-1:
+                    #here we care about the transition to stop
+                    x_k = self.x_train[j]
+                    u_v = (prev_state, self.states_dict["STOP"])
+                    pi_k_v = self.pi_k_v(prev_pi, x_k, u_v, emission_class, emission_dict, transition_dict)
+                    viterbi_lookup[j][u] = pi_k_v
+                
+                else:
+                    
+                    x_k = self.x_train[j]
+                    u_v = (prev_state, u)
+                    pi_k_v = self.pi_k_v(prev_pi, x_k, u_v, emission_class, emission_dict, transition_dict)
+                    viterbi_lookup[j][u] = pi_k_v
+
+            prev_piprev_state = self.argmax(viterbi_lookup[j])
 
 
 if __name__ == "__main__":
