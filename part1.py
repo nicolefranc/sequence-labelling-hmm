@@ -13,6 +13,8 @@ class part1:
         return self.x_val
 
     def get_emission(self, emission_x_given_y, x, y):
+        print(x,y)
+        
         if x in emission_x_given_y[y].keys():
             return emission_x_given_y[y][x]/sum(emission_x_given_y[y].values())
         else:

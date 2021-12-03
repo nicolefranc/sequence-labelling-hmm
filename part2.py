@@ -10,10 +10,12 @@ class part2:
         self.states_dict = conversions()
 
     def get_transmission(self,transmission_x_given_y, x, y):
+
         if x in transmission_x_given_y[y].keys():
             return transmission_x_given_y[y][x]/sum(transmission_x_given_y[y].values())
         else:
-            print("No such state")
+            print("No such transition: ", x)
+            return 0
 
     def transition_training(self):
         # dictionary format: {yi-1:{(yi-1,yi):frequency}
@@ -39,7 +41,6 @@ class part2:
                     yi_1 = start
                     yi_1_yi = (yi_1,self.y_train[i][j])
 
-                    
 
                 if yi_1 in self.transition_x_given_y.keys():
                     if yi_1_yi in self.transition_x_given_y[yi_1].keys():
@@ -47,64 +48,86 @@ class part2:
                     else:
                         self.transition_x_given_y[yi_1][yi_1_yi] = 1
                 else:
-                    print(yi_1)
                     self.transition_x_given_y[yi_1] = {yi_1_yi:1}
 
         return self.transition_x_given_y
 
     def pi_k_v(self, prev_pi, x_k, u_v, emission_class, emission_dict, transition_dict):
         #initialise a path prob matrix
-        emission = emission_class.get_emission(emission_dict, u_v[0], x_k)
-        transmission = self.get_transmission(transition_dict,u_v, u_v[0])
+        emission = emission_class.get_emission(emission_dict, x_k, u_v[1])
+        transmission = self.get_transmission(transition_dict, u_v, u_v[0])
 
         return prev_pi*emission*transmission
 
     def argmax(self,listt):
-        return argmax, indice
+        #ToDo: do later
+        argmax = max(listt)
+        index = listt.index(argmax)
+        return argmax, index
 
-    def viterbi(self, emission_class):
+    def viterbi_per_sentence(self, emission_class, sentence):
         # initialise a matrix that is of no.of states (row) x len of input sequence (col)
-        viterbi_lookup = [ [0]*len(self.states_dict) for i in range(len(self.x_train))]
+        viterbi_lookup = [ [0]*len(self.states_dict) for i in range(len(sentence)+1)]
 
         #perform training
         emission_dict = emission_class.emission_training()
         transition_dict = self.transition_training()
-        prev_pi = None
-        prev_state = None #ToDo: change this to a list
 
-        for j in range(len(self.x_train)):
-            
-            for u in range(len(self.states_dict)):
+        prev_pi = None
+        prev_state = [] #ToDo: change this to a list
+        path = []
+
+        print(sentence)
+
+        for j in range(len(sentence)):
+            for u in range(len(self.states_dict)-2):
                 if j == 0:
                     #we dont care about 0 -> START
                     #we just begin at the 1st input, START -> u and consider for every state there is
                     #in this case the prev_pi is 1
                     prev_pi = 1
-                    x_k = self.x_train[j]
+                    x_k = sentence[j]
                     u_v = (self.states_dict["START"], u)
+
                     pi_k_v = self.pi_k_v(prev_pi, x_k, u_v, emission_class, emission_dict, transition_dict)
+
                     viterbi_lookup[j][u] = pi_k_v
 
-                if j == len(self.states_dict)-1:
+                elif j == len(sentence)-1:
                     #here we care about the transition to stop
-                    x_k = self.x_train[j]
-                    u_v = (prev_state, self.states_dict["STOP"])
-                    pi_k_v = self.pi_k_v(prev_pi, x_k, u_v, emission_class, emission_dict, transition_dict)
+                    # x_k = sentence[j]
+                    u_v = (prev_state[j-1], self.states_dict["STOP"])
+                    print(u_v)
+                    pi_k_v = self.get_transmission(transition_dict, u_v, u_v[0])
                     viterbi_lookup[j][u] = pi_k_v
                 
                 else:
-                    
-                    x_k = self.x_train[j]
-                    u_v = (prev_state, u)
+                    x_k = sentence[j]
+                    u_v = (prev_state[j-1], u)
                     pi_k_v = self.pi_k_v(prev_pi, x_k, u_v, emission_class, emission_dict, transition_dict)
                     viterbi_lookup[j][u] = pi_k_v
 
-            prev_piprev_state = self.argmax(viterbi_lookup[j])
+            argmax_pi, state = self.argmax(viterbi_lookup[j])
+            prev_pi = argmax_pi
+            prev_state.append(state)
+            print("hero",j,prev_state)
+
+
+        return prev_state
+
+    def viterbi(self,emission_class):
+        for i in range(len(self.x_val)):
+            print(self.viterbi_per_sentence(emission_class, self.x_val[i]))
+            # if i == 0:
+                # break
 
 
 if __name__ == "__main__":
     part2 = part2("es")
+    emission_class = part1("es")
     transition_x_given_y = part2.transition_training()
     print(transition_x_given_y)
+
+    states = part2.viterbi(emission_class)
 
            
