@@ -51,8 +51,8 @@ def convert_label(label: str, toInt: bool = True):
             return key
 
 
-def export_predictions(x_val: list, predictions: list, lang: str):
-    f = open(f'./{lang.upper()}/dev.prediction', 'w', encoding='utf-8')
+def export_predictions_from_list(x_val: list, predictions: list, lang: str, part: int):
+    f = open(f'./{lang.upper()}/{part}/dev.prediction', 'w', encoding='utf-8')
     out = ''
 
     for sentence, prediction in zip(x_val, predictions):
@@ -63,7 +63,6 @@ def export_predictions(x_val: list, predictions: list, lang: str):
     f.write(out)
     # print(out)
     f.close()
-
 
 # LABEL CONVERSION USAGE
 ### intLabel = convert_label('B-positive')

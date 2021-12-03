@@ -9,12 +9,15 @@ class part2:
         self.transition_x_given_y = {}
         self.states_dict = conversions()
 
+    def get_x_val(self):
+        return self.x_val
+
     def get_transmission(self,transmission_x_given_y, x, y):
 
         if x in transmission_x_given_y[y].keys():
             return transmission_x_given_y[y][x]/sum(transmission_x_given_y[y].values())
         else:
-            print("No such transition: ", x)
+            # print("No such transition: ", x)
             return 0
 
     def transition_training(self):
@@ -77,7 +80,7 @@ class part2:
         prev_state = [] #ToDo: change this to a list
         path = []
 
-        print(sentence)
+        # print('Sentence', sentence)
 
         for j in range(len(sentence)):
             for u in range(len(self.states_dict)-2):
@@ -97,7 +100,7 @@ class part2:
                     #here we care about the transition to stop
                     # x_k = sentence[j]
                     u_v = (prev_state[j-1], self.states_dict["STOP"])
-                    print(u_v)
+                    # print(u_v)
                     pi_k_v = self.get_transmission(transition_dict, u_v, u_v[0])
                     viterbi_lookup[j][u] = pi_k_v
                 
@@ -110,24 +113,30 @@ class part2:
             argmax_pi, state = self.argmax(viterbi_lookup[j])
             prev_pi = argmax_pi
             prev_state.append(state)
-            print("hero",j,prev_state)
+            # print("hero",j,prev_state)
 
 
         return prev_state
 
     def viterbi(self,emission_class):
+        predictions = []
         for i in range(len(self.x_val)):
-            print(self.viterbi_per_sentence(emission_class, self.x_val[i]))
-            # if i == 0:
+            preds_list = self.viterbi_per_sentence(emission_class, self.x_val[i])
+            predictions.append(preds_list)
+            # if i == 2:
                 # break
+        # print(predictions)
+        return predictions
 
 
 if __name__ == "__main__":
-    part2 = part2("es")
-    emission_class = part1("es")
+    LANG = "ru"
+    part2 = part2(LANG)
+    emission_class = part1(LANG)
     transition_x_given_y = part2.transition_training()
-    print(transition_x_given_y)
+    # print(transition_x_given_y)
 
     states = part2.viterbi(emission_class)
+    # print(states)
 
-           
+    export_predictions_from_list(part2.get_x_val(), predictions=states, lang=LANG, part=2)

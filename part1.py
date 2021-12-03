@@ -13,7 +13,7 @@ class part1:
         return self.x_val
 
     def get_emission(self, emission_x_given_y, x, y):
-        print(x,y)
+        # print(x,y)
         
         if x in emission_x_given_y[y].keys():
             return emission_x_given_y[y][x]/sum(emission_x_given_y[y].values())
@@ -61,7 +61,7 @@ class part1:
 
 
 if __name__ == "__main__":
-    lang = "es"
+    lang = "ru"
     part1 = part1(lang)
     emission_x_given_y = part1.emission_training()
     listofpredictions = []
@@ -74,5 +74,4 @@ if __name__ == "__main__":
 
     # print(listofpredictions)
     # ## Export predictions and print
-    preds = export_predictions(part1.get_x_val(), listofpredictions, lang)
-    print(preds)
+    export_predictions_from_list(part1.get_x_val(), listofpredictions, lang, part=1)
