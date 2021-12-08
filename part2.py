@@ -149,7 +149,7 @@ class part2:
 
 
 if __name__ == "__main__":
-    LANG = "es"
+    LANG = "ru"
     part2 = part2(LANG)
     emission_class = part1(LANG)
     transition_x_given_y = part2.transition_training()
