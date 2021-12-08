@@ -75,6 +75,7 @@ class part3:
         # Sort the given array 
         arr.sort()
         return arr[k-1]
+
     def arg5th(self,listt):
         #ToDo: do later
         arg5th = self.kthSmallest(listt, 5)
@@ -113,7 +114,8 @@ class part3:
                 elif layer == len(sentence)-1:
                     #here we care about the transition to stop
                     u_v = (state, self.states_dict["STOP"])
-                    pi_k_v = self.get_transmission(transition_dict, u_v, u_v[0])
+                    prev_pi = viterbi_lookup[layer-1][prev_state][1]
+                    pi_k_v = prev_pi*self.get_transmission(transition_dict, u_v, u_v[0])
                     best_path_so_far = viterbi_lookup[layer-1][state][0]+[state,self.states_dict["STOP"]]
                     viterbi_lookup[layer][state] = (best_path_so_far, pi_k_v)
                     # pprint(viterbi_lookup)
@@ -122,7 +124,7 @@ class part3:
                     temp_list = []
                     for prev_state in range(len(viterbi_lookup[layer-1])):
                         #([start,state], pi(start,state))
-                        prev_pi = viterbi_lookup[layer-1][prev_state][1]
+                        prev_pi = viterbi_lookup[layer-1][state][1]
                         word = sentence[layer]
                         u_v = (prev_state, state)
 
@@ -137,7 +139,7 @@ class part3:
                     best_path_so_far = viterbi_lookup[layer-1][best_prev_state][0] + [state]
                     viterbi_lookup[layer][state] = (best_path_so_far, max_pi)
                     # pprint(viterbi_lookup)
-        
+        pprint(viterbi_lookup)
         return viterbi_lookup
 
 
@@ -170,4 +172,4 @@ if __name__ == "__main__":
     states = part3.viterbi(emission_class)
     # print(states)
 
-    export_predictions_from_list(part3.get_x_val(), predictions=states, lang=LANG, part=3)
+    # export_predictions_from_list(part3.get_x_val(), predictions=states, lang=LANG, part=3)

@@ -102,7 +102,8 @@ class part2:
                 elif layer == len(sentence)-1:
                     #here we care about the transition to stop
                     u_v = (state, self.states_dict["STOP"])
-                    pi_k_v = self.get_transmission(transition_dict, u_v, u_v[0])
+                    prev_pi = viterbi_lookup[layer-1][state][1]
+                    pi_k_v = prev_pi*self.get_transmission(transition_dict, u_v, u_v[0])
                     best_path_so_far = viterbi_lookup[layer-1][state][0]+[state,self.states_dict["STOP"]]
                     viterbi_lookup[layer][state] = (best_path_so_far, pi_k_v)
                     # pprint(viterbi_lookup)
@@ -149,7 +150,7 @@ class part2:
 
 
 if __name__ == "__main__":
-    LANG = "ru"
+    LANG = "es"
     part2 = part2(LANG)
     emission_class = part1(LANG)
     transition_x_given_y = part2.transition_training()
