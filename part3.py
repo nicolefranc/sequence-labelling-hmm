@@ -115,7 +115,7 @@ class part3:
                     pi_k_v = self.get_transmission(transition_dict, u_v, u_v[0])
                     best_path_so_far = viterbi_lookup[layer-1][state][0]+[state,self.states_dict["STOP"]]
                     viterbi_lookup[layer][state] = (best_path_so_far, pi_k_v)
-                    pprint(viterbi_lookup)
+                    # pprint(viterbi_lookup)
 
                 else:
                     temp_list = []
@@ -153,7 +153,8 @@ class part3:
 
             best_path = viterbi_lookup[-1][index][0]
 
-            predictions.append(best_path)
+            predictions.append(best_path[1:len(best_path)-1])
+
         return predictions
 
 
@@ -167,4 +168,4 @@ if __name__ == "__main__":
     states = part3.viterbi(emission_class)
     # print(states)
 
-    export_predictions_from_list(part3.get_x_val(), predictions=states, lang=LANG, part=2)
+    # export_predictions_from_list(part3.get_x_val(), predictions=states, lang=LANG, part=2)
