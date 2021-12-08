@@ -1,6 +1,7 @@
 from data import *
 from part1 import *
 from pprint import pprint
+from tqdm import tqdm
 
 class part3:
 
@@ -94,7 +95,7 @@ class part3:
         for layer in range(len(sentence)):
 
             for state in range(len(self.states_dict)-2):
-                print("layer: ", layer,"state: ", state)
+                # print("layer: ", layer,"state: ", state)
                 if layer == 0:
                     #we dont care about 0 -> START
                     #we just begin at the 1st input, START -> node and consider for every state there is
@@ -142,7 +143,8 @@ class part3:
 
     def viterbi(self,emission_class):
         predictions = []
-        for i in range(len(self.x_val)):
+
+        for i in tqdm(range(len(self.x_val))):
             viterbi_lookup = self.viterbi_per_sentence(emission_class, self.x_val[i])
 
             final_pi = []
@@ -159,7 +161,7 @@ class part3:
 
 
 if __name__ == "__main__":
-    LANG = "ru"
+    LANG = "es"
     part3 = part3(LANG)
     emission_class = part1(LANG)
     transition_x_given_y = part3.transition_training()
@@ -168,4 +170,4 @@ if __name__ == "__main__":
     states = part3.viterbi(emission_class)
     # print(states)
 
-    # export_predictions_from_list(part3.get_x_val(), predictions=states, lang=LANG, part=2)
+    export_predictions_from_list(part3.get_x_val(), predictions=states, lang=LANG, part=3)
