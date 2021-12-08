@@ -1,5 +1,6 @@
 from data import *
 from part1 import *
+from pprint import pprint
 
 class part3:
 
@@ -73,89 +74,99 @@ class part3:
         # Sort the given array 
         arr.sort()
         return arr[k-1]
-
     def arg5th(self,listt):
         #ToDo: do later
         arg5th = self.kthSmallest(listt, 5)
         index = listt.index(arg5th)
         return arg5th, index
 
-    #the only change is that if you are at the last layer, instead of using argmax, you use arg5th :D
+    def viterbi_per_sentence(self,emission_class, sentence):
 
-    def viterbi_per_sentence(self, emission_class, sentence):
-        # initialise a matrix that is of no.of states (row) x len of input sequence (col)
-        viterbi_lookup = [ [0]*len(self.states_dict) for i in range(len(sentence)+1)]
+        viterbi_lookup = [ [0]*(len(self.states_dict)-2) for i in range(len(sentence))]
 
         #perform training
         emission_dict = emission_class.emission_training()
         transition_dict = self.transition_training()
 
-        prev_pi = None
-        prev_state = [] #ToDo: change this to a list
-        path = []
+        #at every node you store the highest achieveable pi that passes through that node
+        #and you store the path thus far
+        
+        for layer in range(len(sentence)):
 
-        # print('Sentence', sentence)
-
-        for j in range(len(sentence)):
-            for u in range(len(self.states_dict)-2):
-                if j == 0:
+            for state in range(len(self.states_dict)-2):
+                print("layer: ", layer,"state: ", state)
+                if layer == 0:
                     #we dont care about 0 -> START
-                    #we just begin at the 1st input, START -> u and consider for every state there is
+                    #we just begin at the 1st input, START -> node and consider for every state there is
                     #in this case the prev_pi is 1
                     prev_pi = 1
-                    x_k = sentence[j]
-                    u_v = (self.states_dict["START"], u)
+                    word = sentence[layer]
+                    u_v = (self.states_dict["START"], state)
 
-                    pi_k_v = self.pi_k_v(prev_pi, x_k, u_v, emission_class, emission_dict, transition_dict)
+                    pi_k_v = self.pi_k_v(prev_pi, word, u_v, emission_class, emission_dict, transition_dict)
+                    
+                    #([start,state], pi(start,state))
+                    viterbi_lookup[layer][state] = (list(u_v) ,pi_k_v)
+                    # pprint(viterbi_lookup)
 
-                    viterbi_lookup[j][u] = pi_k_v
-
-                elif j == len(sentence)-1:
+                elif layer == len(sentence)-1:
                     #here we care about the transition to stop
-                    # x_k = sentence[j]
-                    u_v = (prev_state[j-1], self.states_dict["STOP"])
-                    # print(u_v)
+                    u_v = (state, self.states_dict["STOP"])
                     pi_k_v = self.get_transmission(transition_dict, u_v, u_v[0])
-                    viterbi_lookup[j][u] = pi_k_v
-                
+                    best_path_so_far = viterbi_lookup[layer-1][state][0]+[state,self.states_dict["STOP"]]
+                    viterbi_lookup[layer][state] = (best_path_so_far, pi_k_v)
+                    pprint(viterbi_lookup)
+
                 else:
-                    x_k = sentence[j]
-                    u_v = (prev_state[j-1], u)
-                    pi_k_v = self.pi_k_v(prev_pi, x_k, u_v, emission_class, emission_dict, transition_dict)
-                    viterbi_lookup[j][u] = pi_k_v
+                    temp_list = []
+                    for prev_state in range(len(viterbi_lookup[layer-1])):
+                        #([start,state], pi(start,state))
+                        prev_pi = viterbi_lookup[layer-1][prev_state][1]
+                        word = sentence[layer]
+                        u_v = (prev_state, state)
 
-            if j == len(sentence)-2:
-                argmax_pi, state = self.arg5th(viterbi_lookup[j])
-                prev_pi = argmax_pi
-                prev_state.append(state)
-            
-            else:
-                argmax_pi, state = self.argmax(viterbi_lookup[j])
-                prev_pi = argmax_pi
-                prev_state.append(state)
-            # print("hero",j,prev_state)
+                        pi_k_v = self.pi_k_v(prev_pi, word, u_v, emission_class, emission_dict, transition_dict)
+                        temp_list.append(pi_k_v)
+                    #change to max
+                    max_pi, best_prev_state = self.argmax(temp_list)
+                    # print("here:")
+                    # print(state)
+                    # pprint(viterbi_lookup[layer-1][best_prev_state][0]+[state])
+                    # print("end")
+                    best_path_so_far = viterbi_lookup[layer-1][best_prev_state][0] + [state]
+                    viterbi_lookup[layer][state] = (best_path_so_far, max_pi)
+                    # pprint(viterbi_lookup)
+        
+        return viterbi_lookup
 
-        return prev_state
 
     def viterbi(self,emission_class):
         predictions = []
         for i in range(len(self.x_val)):
-            preds_list = self.viterbi_per_sentence(emission_class, self.x_val[i])
-            predictions.append(preds_list)
-            # if i == 2:
-                # break
-        # print(predictions)
+            viterbi_lookup = self.viterbi_per_sentence(emission_class, self.x_val[i])
+
+            final_pi = []
+            for i in range(len(self.states_dict)-2):
+                final_pi.append(viterbi_lookup[-1][i][1])
+            
+            max_pi, index = self.arg5th(final_pi)
+
+            best_path = viterbi_lookup[-1][index][0]
+
+            predictions.append(best_path)
+            print("predictions:",predictions)
+            print("end")
         return predictions
 
 
 if __name__ == "__main__":
     LANG = "ru"
-    part2 = part2(LANG)
+    part3 = part3(LANG)
     emission_class = part1(LANG)
-    transition_x_given_y = part2.transition_training()
+    transition_x_given_y = part3.transition_training()
     # print(transition_x_given_y)
 
-    states = part2.viterbi(emission_class)
+    states = part3.viterbi(emission_class)
     # print(states)
 
-    export_predictions_from_list(part2.get_x_val(), predictions=states, lang=LANG, part=2)
+    export_predictions_from_list(part3.get_x_val(), predictions=states, lang=LANG, part=2)
