@@ -118,7 +118,8 @@ class part2:
 
                         pi_k_v = self.pi_k_v(prev_pi, word, u_v, emission_class, emission_dict, transition_dict)
                         temp_list.append(pi_k_v)
-                    #change to max
+                        
+                    
                     max_pi, best_prev_state = self.argmax(temp_list)
                     # print("here:")
                     # print(state)
@@ -127,7 +128,7 @@ class part2:
                     best_path_so_far = viterbi_lookup[layer-1][best_prev_state][0] + [state]
                     viterbi_lookup[layer][state] = (best_path_so_far, max_pi)
                     # pprint(viterbi_lookup)
-        
+        # pprint(viterbi_lookup)
         return viterbi_lookup
 
 
@@ -150,7 +151,7 @@ class part2:
 
 
 if __name__ == "__main__":
-    LANG = "es"
+    LANG = "ru"
     part2 = part2(LANG)
     emission_class = part1(LANG)
     transition_x_given_y = part2.transition_training()

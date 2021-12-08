@@ -1,7 +1,16 @@
+from re import U
 from data import *
 from part1 import *
 from pprint import pprint
 from tqdm import tqdm
+
+class viterbi_node:
+    def __init__(self,layer,state_path,pi_value) -> None:
+        self.layer = layer
+        #this can be a list of state instead of a single thing, depends
+        self.state = state_path
+        self.pi_value = pi_value
+
 
 class part3:
 
@@ -70,17 +79,37 @@ class part3:
         index = listt.index(argmax)
         return argmax, index
 
-    def kthSmallest(self, arr, k):
+    def kthLargest(self, arr, k):
   
         # Sort the given array 
-        arr.sort()
+        arr.sort(reverse=True)
         return arr[k-1]
+
+    def kLargest(self, arr, k):
+        # Sort the given array arr in reverse
+        # order.
+        arr.sort(reverse = True)
+        # Print the first kth largest elements
+        return arr[:k]
+
+    def arg5(self,listt):
+        #ToDo: do later
+        arg5th = self.kLargest(listt, 5)
+        index5 = []
+        for i in arg5th:
+            index = listt.index(i)
+            index5.append(index)
+        return arg5th, index5
 
     def arg5th(self,listt):
         #ToDo: do later
-        arg5th = self.kthSmallest(listt, 5)
+        arg5th = self.kthLargest(listt, 5)
         index = listt.index(arg5th)
         return arg5th, index
+
+    
+    #in every slot of the list instead of storing the values directly you store it as a node,so you can have different things in the stupid thing
+    
 
     def viterbi_per_sentence(self,emission_class, sentence):
 
@@ -92,8 +121,10 @@ class part3:
 
         #at every node you store the highest achieveable pi that passes through that node
         #and you store the path thus far
-        
+        # print(sentence)
         for layer in range(len(sentence)):
+            list_of_pi_values = []
+            list_of_states = []
 
             for state in range(len(self.states_dict)-2):
                 # print("layer: ", layer,"state: ", state)
@@ -107,57 +138,108 @@ class part3:
 
                     pi_k_v = self.pi_k_v(prev_pi, word, u_v, emission_class, emission_dict, transition_dict)
                     
-                    #([start,state], pi(start,state))
-                    viterbi_lookup[layer][state] = (list(u_v) ,pi_k_v)
-                    # pprint(viterbi_lookup)
+                    list_of_pi_values.append(pi_k_v)
+                    list_of_states.append(list(u_v))
 
-                elif layer == len(sentence)-1:
-                    #here we care about the transition to stop
-                    u_v = (state, self.states_dict["STOP"])
-                    prev_pi = viterbi_lookup[layer-1][prev_state][1]
-                    pi_k_v = prev_pi*self.get_transmission(transition_dict, u_v, u_v[0])
-                    best_path_so_far = viterbi_lookup[layer-1][state][0]+[state,self.states_dict["STOP"]]
-                    viterbi_lookup[layer][state] = (best_path_so_far, pi_k_v)
+                    #([start,state], pi(start,state))
+                    viterbi_lookup[layer][state] = viterbi_node(layer, list(u_v), pi_k_v)
                     # pprint(viterbi_lookup)
+                
+                elif layer == len(sentence)-1 and len(sentence)>2:
+                    
+                    list_of_pi_values = []
+                    list_of_states = []
+
+                    for prev_node in range(len(viterbi_lookup[layer-1])):
+                        #pi(state,state), pi(state,state), ...
+                        pi_values = viterbi_lookup[layer-1][prev_node].pi_value
+                        #[start,state,state], [start,state,state], ...
+                        prev_states = viterbi_lookup[layer-1][prev_node].state
+                        for i in range(5):
+                            pi_value = pi_values[i]
+                            u_v = (prev_states[i][-1], self.states_dict["STOP"])
+                            pi_k_v = pi_value*self.get_transmission(transition_dict, u_v, u_v[0])
+                            list_of_pi_values.append(pi_k_v)
+                            list_of_states.append(prev_states[i]+[self.states_dict["STOP"]])
+                
+                elif layer == len(sentence)-1:
+                    list_of_pi_values = []
+                    list_of_states = []
+
+                    for prev_node in range(len(viterbi_lookup[layer-1])):
+                        #pi(state,state), pi(state,state), ...
+                        pi_value = viterbi_lookup[layer-1][prev_node].pi_value
+                        #[start,state,state], [start,state,state], ...
+                        prev_state = viterbi_lookup[layer-1][prev_node].state
+                        
+                        u_v = (prev_state[-1], self.states_dict["STOP"])
+                        pi_k_v = pi_value*self.get_transmission(transition_dict, u_v, u_v[0])
+                        list_of_pi_values.append(pi_k_v)
+                        list_of_states.append(prev_state+[self.states_dict["STOP"]])
 
                 else:
-                    temp_list = []
-                    for prev_state in range(len(viterbi_lookup[layer-1])):
+                    #in subsequent layers, for each node you have to look for the top 5 values. Hence you have to append 5 list in the pi_v and the states
+                    if layer == 1:
+                        #the nodes here wont have more than one values, so its just a int
                         #([start,state], pi(start,state))
-                        prev_pi = viterbi_lookup[layer-1][state][1]
-                        word = sentence[layer]
-                        u_v = (prev_state, state)
+                        list_of_pi_values = []
+                        list_of_states = []
+                        for prev_node in range(len(viterbi_lookup[layer-1])):
+                            #pi(start,state)
+                            pi_value = viterbi_lookup[layer-1][prev_node].pi_value
+                            #[start,state]
+                            prev_state = viterbi_lookup[layer-1][prev_node].state[-1]
+                            u_v = (prev_state, state)
 
-                        pi_k_v = self.pi_k_v(prev_pi, word, u_v, emission_class, emission_dict, transition_dict)
-                        temp_list.append(pi_k_v)
-                    #change to max
-                    max_pi, best_prev_state = self.argmax(temp_list)
-                    # print("here:")
-                    # print(state)
-                    # pprint(viterbi_lookup[layer-1][best_prev_state][0]+[state])
-                    # print("end")
-                    best_path_so_far = viterbi_lookup[layer-1][best_prev_state][0] + [state]
-                    viterbi_lookup[layer][state] = (best_path_so_far, max_pi)
-                    # pprint(viterbi_lookup)
-        pprint(viterbi_lookup)
-        return viterbi_lookup
+                            pi_k_v = self.pi_k_v(pi_value, word, u_v, emission_class, emission_dict, transition_dict)
+                            list_of_pi_values.append(pi_k_v)
+                            list_of_states.append(viterbi_lookup[layer-1][prev_node].state+[state])
 
+                        pis5, indexes5 = self.arg5(list_of_pi_values)
+                        list_of_5_states = [list_of_states[indexes5[0]]] + [list_of_states[indexes5[1]]] + [list_of_states[indexes5[2]]] + [list_of_states[indexes5[3]]] + [list_of_states[indexes5[4]]]
+                        viterbi_lookup[layer][state] = viterbi_node(layer, list_of_5_states, pis5)
+                    
+                    
+
+                    else:
+                        list_of_pi_values = []
+                        list_of_states = []
+                        for prev_node in range(len(viterbi_lookup[layer-1])):
+                            #pi(state,state), pi(state,state), ...
+                            pi_values = viterbi_lookup[layer-1][prev_node].pi_value
+                            #[start,state,state], [start,state,state], ...
+                            prev_states = viterbi_lookup[layer-1][prev_node].state
+                            for i in range(5):
+                                pi_value = pi_values[i]
+                                u_v = (prev_states[i][-1], state)
+                                pi_k_v = self.pi_k_v(pi_value, word, u_v, emission_class, emission_dict, transition_dict)
+                                list_of_pi_values.append(pi_k_v)
+                                list_of_states.append(prev_states[i]+[state])
+
+                        pis5, indexes5 = self.arg5(list_of_pi_values)
+                        list_of_5_states = [list_of_states[indexes5[0]]] + [list_of_states[indexes5[1]]] + [list_of_states[indexes5[2]]] + [list_of_states[indexes5[3]]] + [list_of_states[indexes5[4]]]
+                        viterbi_lookup[layer][state] = viterbi_node(layer, list_of_5_states, pis5)
+
+        # pprint(viterbi_lookup)
+        # print(len(list_of_pi_values))
+        # pprint(list_of_pi_values)
+        # pprint(list_of_states)
+
+        pi5th, index5th = self.arg5th(list_of_pi_values)
+        path5th = list_of_states[index5th]
+
+        return pi5th,path5th
 
     def viterbi(self,emission_class):
         predictions = []
 
         for i in tqdm(range(len(self.x_val))):
-            viterbi_lookup = self.viterbi_per_sentence(emission_class, self.x_val[i])
+            pi5th,path5th = self.viterbi_per_sentence(emission_class, self.x_val[i])
 
-            final_pi = []
-            for i in range(len(self.states_dict)-2):
-                final_pi.append(viterbi_lookup[-1][i][1])
-            
-            max_pi, index = self.arg5th(final_pi)
 
-            best_path = viterbi_lookup[-1][index][0]
-
-            predictions.append(best_path[1:len(best_path)-1])
+            predictions.append(path5th)
+            # print(pi5th,predictions)
+            # print("end")
 
         return predictions
 
@@ -172,4 +254,4 @@ if __name__ == "__main__":
     states = part3.viterbi(emission_class)
     # print(states)
 
-    # export_predictions_from_list(part3.get_x_val(), predictions=states, lang=LANG, part=3)
+    export_predictions_from_list(part3.get_x_val(), predictions=states, lang=LANG, part=3)
