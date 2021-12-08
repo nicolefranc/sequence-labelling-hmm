@@ -154,8 +154,6 @@ class part3:
             best_path = viterbi_lookup[-1][index][0]
 
             predictions.append(best_path)
-            print("predictions:",predictions)
-            print("end")
         return predictions
 
 

@@ -1,6 +1,7 @@
 from data import *
 from part1 import *
 from pprint import pprint
+from tqdm import tqdm
 
 class part2:
 
@@ -83,7 +84,7 @@ class part2:
         for layer in range(len(sentence)):
 
             for state in range(len(self.states_dict)-2):
-                print("layer: ", layer,"state: ", state)
+                # print("layer: ", layer,"state: ", state)
                 if layer == 0:
                     #we dont care about 0 -> START
                     #we just begin at the 1st input, START -> node and consider for every state there is
@@ -104,7 +105,7 @@ class part2:
                     pi_k_v = self.get_transmission(transition_dict, u_v, u_v[0])
                     best_path_so_far = viterbi_lookup[layer-1][state][0]+[state,self.states_dict["STOP"]]
                     viterbi_lookup[layer][state] = (best_path_so_far, pi_k_v)
-                    pprint(viterbi_lookup)
+                    # pprint(viterbi_lookup)
 
                 else:
                     temp_list = []
@@ -131,7 +132,7 @@ class part2:
 
     def viterbi(self,emission_class):
         predictions = []
-        for i in range(len(self.x_val)):
+        for i in tqdm(range(len(self.x_val))):
             viterbi_lookup = self.viterbi_per_sentence(emission_class, self.x_val[i])
 
             final_pi = []
@@ -142,14 +143,13 @@ class part2:
 
             best_path = viterbi_lookup[-1][index][0]
 
-            predictions.append(best_path)
-            print("predictions:",predictions)
-            
+            predictions.append(best_path[1:len(best_path)-1])
+
         return predictions
 
 
 if __name__ == "__main__":
-    LANG = "ru"
+    LANG = "es"
     part2 = part2(LANG)
     emission_class = part1(LANG)
     transition_x_given_y = part2.transition_training()
