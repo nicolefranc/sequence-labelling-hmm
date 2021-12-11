@@ -1,16 +1,14 @@
-La START
-comida I-positive
+La I-positive
+comida O
 estuvo O
 muy O
 sabrosa O
-. O
 
-Servicio START
-esmerado I-positive
-. O
+Servicio I-positive
+esmerado O
 
-Para START
-un I-positive
+Para I-positive
+un O
 menu O
 gastronomico O
 , O
@@ -49,19 +47,17 @@ precio O
 podria O
 considerarse O
 excepcional O
-. O
 
-Servicio START
-atento I-positive
+Servicio I-positive
+atento O
 y O
 eficiente O
 , O
 ambiente O
 agradable O
-. O
 
-Tienen START
-una I-positive
+Tienen I-positive
+una O
 carta O
 bastante O
 extensa O
@@ -73,32 +69,28 @@ mejor O
 que O
 el O
 anterior O
-. O
 
-Un START
-10 B-negative
+Un B-negative
+10 O
 en O
 comida O
 mediterranea O
-! O
 
-Una START
-verguenza I-positive
+Una I-positive
+verguenza O
 todo O
-. O
 
-lo START
-tendre I-positive
+lo I-positive
+tendre O
 en O
 cuenta O
 para O
 las O
 proximas O
 veces O
-. O
 
-Mi START
-opinión I-positive
+Mi I-positive
+opinión O
 sobre O
 el O
 restaurante O
@@ -112,15 +104,13 @@ correcto O
 pero O
 no O
 extraordinario O
-. O
 
-P START
-. I-positive
+P I-positive
+. O
 D O
-. O
 
-A START
-la I-positive
+A I-positive
+la O
 una O
 mi O
 mujer O
@@ -190,10 +180,9 @@ y O
 no O
 hubiese O
 empezado O
-. O
 
-muy START
-buen I-positive
+muy I-positive
+buen O
 servicio O
 , O
 incluido O
@@ -208,20 +197,17 @@ nivel O
 de O
 calidad O
 excelente O
-. O
 
-Todo START
-ok I-positive
-.. O
+Todo I-positive
+ok O
 
-Excelente START
-el I-positive
+Excelente I-positive
+el O
 circuito O
 termal O
-. O
 
-11:00 START
-de I-positive
+11:00 I-positive
+de O
 la O
 noche O
 cocineros O
@@ -241,10 +227,9 @@ detergente O
 invade O
 la O
 sala O
-. O
 
-Gracias START
-por I-positive
+Gracias I-positive
+por O
 la O
 aclaración O
 Pedro O
@@ -284,10 +269,9 @@ no O
 es O
 el O
 caso O
-. O
 
-Hubiera START
-mejorado I-positive
+Hubiera I-positive
+mejorado O
 con O
 un O
 mejor O
@@ -300,10 +284,9 @@ predilecto O
 mesa O
 mas O
 confortable O
-. O
 
-El START
-restaurante B-negative
+El B-negative
+restaurante O
 bien O
 , O
 con O
@@ -334,10 +317,9 @@ los O
 tres O
 que O
 fuimos O
-. O
 
-Tuvimos START
-que I-positive
+Tuvimos I-positive
+que O
 esperar O
 un O
 poco O
@@ -353,10 +335,9 @@ buena O
 merece O
 la O
 pena O
-. O
 
-Creo START
-que I-positive
+Creo I-positive
+que O
 es O
 algo O
 perfecto O
@@ -381,10 +362,9 @@ cenar O
 , O
 quedará O
 insatisfecho O
-. O
 
-A START
-diferencia I-positive
+A I-positive
+diferencia O
 de O
 otros O
 argentinos O
@@ -403,10 +383,9 @@ la O
 carne O
 era O
 excelente O
-. O
 
-Y START
-de I-positive
+Y I-positive
+de O
 Can O
 Roca O
 lo O
@@ -417,10 +396,9 @@ Qué O
 les O
 digo O
 yo O
-? O
 
-Para START
-colmo I-positive
+Para I-positive
+colmo O
 nos O
 amenizaron O
 la O
@@ -450,10 +428,9 @@ y O
 da O
 comida O
 italiana O
-. O
 
-Son START
-muchos I-positive
+Son I-positive
+muchos O
 , O
 muchísimos O
 , O
@@ -528,15 +505,13 @@ también O
 tienen O
 buenas O
 mesas O
-. O
 
-Buena START
-realcion I-positive
+Buena I-positive
+realcion O
 calidad-precio O
-. O
 
-Volveremos START
-sin I-positive
+Volveremos I-positive
+sin O
 lugar O
 a O
 dudas O
@@ -551,16 +526,14 @@ cosas O
 Enhorabuena O
 seguid O
 así O
-! O
 
-correcto START
-y I-positive
+correcto I-positive
+y O
 maxima O
 comodidad O
-. O
 
-Evidentemente START
-no I-positive
+Evidentemente I-positive
+no O
 volveremos O
 ni O
 nos O
@@ -569,17 +542,15 @@ nada O
 de O
 esa O
 invitacion O
-. O
 
-Repito START
-, I-positive
+Repito I-positive
+, O
 la O
 comida O
 excelente O
-. O
 
-La START
-pena B-negative
+La B-negative
+pena O
 era O
 que O
 fuimos O
@@ -595,13 +566,11 @@ bailar.La O
 cena O
 , O
 regular O
-. O
 
-Repetiremos START
-. I-positive
+Repetiremos I-positive
 
-Agradable START
-ambiente I-positive
+Agradable I-positive
+ambiente O
 , O
 muy O
 buen O
@@ -609,19 +578,17 @@ servicio O
 y O
 exquisitos O
 platos O
-. O
 
-El START
-precio B-negative
+El B-negative
+precio O
 un O
 tanto O
 elevado O
 pero O
 razonable O
-. O
 
-Ciertamente START
-fue I-positive
+Ciertamente I-positive
+fue O
 desilusionante O
 , O
 debido O
@@ -642,18 +609,16 @@ relación O
 con O
 los O
 precios O
-. O
 
-Un START
-menú B-neutral
+Un B-neutral
+menú O
 estupendo O
 , O
 muy O
 completo O
-. O
 
-Fuimos START
-por I-positive
+Fuimos I-positive
+por O
 una O
 recomedación O
 y O
@@ -661,18 +626,16 @@ fue O
 todo O
 un O
 acierto O
-. O
 
-Igual START
-fué I-positive
+Igual I-positive
+fué O
 pero O
 ya O
 no O
 es O
-. O
 
-<+> START
-Sugerencias I-positive
+<+> I-positive
+Sugerencias O
 de O
 entrantes O
 y O
@@ -683,10 +646,9 @@ excelentes O
 claras O
 y O
 concisas O
-. O
 
-A START
-destacar I-positive
+A I-positive
+destacar O
 el O
 cabrito O
 y O
@@ -697,13 +659,11 @@ mandarina O
 , O
 simplemente O
 delicioso O
-. O
 
-Normalito START
-. I-positive
+Normalito I-positive
 
-De START
-por I-positive
+De I-positive
+por O
 si O
 ya O
 habiamos O
@@ -721,10 +681,9 @@ la O
 C O
 / O
 Muntaner O
-. O
 
-La START
-cena B-negative
+La B-negative
+cena O
 estaba O
 buenisima O
 , O
@@ -752,20 +711,18 @@ punto O
 y O
 el O
 postre O
-. O
 
-La START
-piña B-negative
+La B-negative
+piña O
 tenía O
 un O
 intenso O
 sabor O
 de O
 ajo O
-. O
 
-Aunque START
-estabamos I-positive
+Aunque I-positive
+estabamos O
 varios O
 grupos O
 no O
@@ -779,10 +736,9 @@ pudimos O
 hablar O
 sin O
 gritar O
-. O
 
-El START
-pasado B-negative
+El B-negative
+pasado O
 sábado O
 cenamos O
 con O
@@ -819,10 +775,9 @@ asi O
 como O
 el O
 servicio O
-. O
 
-Ellos START
-hacen I-positive
+Ellos I-positive
+hacen O
 todo O
 lo O
 posible O
@@ -831,14 +786,12 @@ que O
 no O
 se O
 note O
-. O
 
-Local START
-precioso I-positive
-. O
+Local I-positive
+precioso O
 
-La START
-verdad B-negative
+La B-negative
+verdad O
 una O
 buena O
 opcion O
@@ -853,10 +806,9 @@ de O
 una O
 buena O
 cena O
-. O
 
-Como START
-siempre I-positive
+Como I-positive
+siempre O
 , O
 servicio O
 muy O
@@ -866,10 +818,9 @@ rápido O
 y O
 excelente O
 comida O
-. O
 
-Fuimos START
-a I-positive
+Fuimos I-positive
+a O
 cenar O
 el O
 viernes O
@@ -908,15 +859,13 @@ los O
 camareros O
 muy O
 simpáticos O
-. O
 
-Rapidez START
-entre I-positive
+Rapidez I-positive
+entre O
 platos O
-. O
 
-Un START
-restaurante B-negative
+Un B-negative
+restaurante O
 muy O
 tranquilo O
 y O
@@ -929,18 +878,16 @@ la O
 familia O
 , O
 etc O
-... O
 
-Extraordinario START
-el I-positive
+Extraordinario I-positive
+el O
 trabajo O
 en O
 este O
 aspecto O
-. O
 
-Estupenda START
-cena I-positive
+Estupenda I-positive
+cena O
 el O
 sábado O
 por O
@@ -951,10 +898,9 @@ un O
 bono O
 de O
 Groupalia O
-. O
 
-Celebramos START
-el I-positive
+Celebramos I-positive
+el O
 cumpleaños O
 de O
 mi O
@@ -963,10 +909,9 @@ y O
 todo O
 fue O
 perfecto O
-. O
 
-El START
-aspecto B-negative
+El B-negative
+aspecto O
 del O
 local O
 es O
@@ -981,14 +926,12 @@ americanos O
 de O
 comida O
 rapida O
-. O
 
-Nunca START
-defrauda I-positive
-. O
+Nunca I-positive
+defrauda O
 
-Los START
-segundos I-positive
+Los I-positive
+segundos O
 he O
 probado O
 varios O
@@ -996,10 +939,9 @@ varios O
 pero O
 siempre O
 buenos O
-. O
 
-Ambas START
-dos I-positive
+Ambas I-positive
+dos O
 muy O
 discretas O
 como O
@@ -1010,33 +952,28 @@ este O
 tipo O
 de O
 establecimeinto O
-. O
 
-Trato START
-super I-positive
+Trato I-positive
+super O
 amable O
-. O
 
-Gracias START
-. I-positive
+Gracias I-positive
 
-Totalmente START
-recomendable I-positive
-! O
+Totalmente I-positive
+recomendable O
 ! O
 
-Buen START
-ambiente I-positive
+Buen I-positive
+ambiente O
 , O
 cocina O
 excelente O
 y O
 decorado O
 atractivo O
-. O
 
-Es START
-un I-positive
+Es I-positive
+un O
 restaurante O
 para O
 repetir O
@@ -1044,10 +981,9 @@ repetir O
 repetir O
 y O
 repetir O
-. O
 
-Lo START
-unico I-positive
+Lo I-positive
+unico O
 que O
 vi O
 flojo O
@@ -1069,10 +1005,9 @@ lo O
 demas O
 todo O
 bien O
-. O
 
-Así START
-como I-positive
+Así I-positive
+como O
 el O
 romesco O
 , O
@@ -1084,14 +1019,12 @@ poco O
 de O
 bote O
 " O
-. O
 
-Todo START
-óptimo I-positive
-. O
+Todo I-positive
+óptimo O
 
-Por START
-cierto I-positive
+Por I-positive
+cierto O
 , O
 a O
 modo O
@@ -1163,10 +1096,9 @@ yo O
 por O
 propia O
 iniciativa O
-. O
 
-En START
-lo B-negative
+En B-negative
+lo O
 referente O
 a O
 calidad-precio O
@@ -1192,14 +1124,12 @@ de O
 referencia O
 de O
 Zaragoza O
-. O
 
-Absolutamente START
-recomendable I-positive
-. O
+Absolutamente I-positive
+recomendable O
 
-Pero START
-donde I-positive
+Pero I-positive
+donde O
 si O
 que O
 destaca O
@@ -1259,10 +1189,9 @@ gran O
 eficacia O
 y O
 nivel O
-. O
 
-Los START
-platos I-positive
+Los I-positive
+platos O
 muy O
 correctos O
 en O
@@ -1270,10 +1199,9 @@ presentación O
 cantidad O
 y O
 sabores O
-. O
 
-El START
-local B-negative
+El B-negative
+local O
 es O
 estrecho O
 y O
@@ -1296,10 +1224,9 @@ como O
 es O
 el O
 caso O
-. O
 
-Tranquilo START
-agradable I-positive
+Tranquilo I-positive
+agradable O
 y O
 los O
 niños O
@@ -1317,14 +1244,12 @@ para O
 toda O
 la O
 familia O
-. O
 
-Nos START
-gusto I-positive
-. O
+Nos I-positive
+gusto O
 
-Los START
-vinos I-positive
+Los I-positive
+vinos O
 han O
 subido O
 los O
@@ -1334,10 +1259,9 @@ de O
 un O
 30 O
 % O
-. O
 
-Cenamos START
-muy I-positive
+Cenamos I-positive
+muy O
 bien O
 , O
 con O
@@ -1390,10 +1314,9 @@ saber O
 si O
 tendriamos O
 sitio O
-. O
 
-Precios START
-: I-positive
+Precios I-positive
+: O
 correctos O
 , O
 lo O
@@ -1401,10 +1324,9 @@ normal O
 en O
 estos O
 tiempos O
-. O
 
-Hola START
-Todas I-positive
+Hola I-positive
+Todas O
 las O
 veces O
 que O
@@ -1420,32 +1342,28 @@ calidad O
 y O
 trato O
 correcto O
-. O
 
-Es START
-una I-positive
+Es I-positive
+una O
 pasada O
-. O
 
-Muy START
-agradable I-positive
+Muy I-positive
+agradable O
 y O
 servicial O
 ! O
 ! O
-! O
 
-Pedir START
-una I-positive
+Pedir I-positive
+una O
 mesa O
 en O
 el O
 primer O
 piso O
-. O
 
-Estuve START
-en I-positive
+Estuve I-positive
+en O
 el O
 restaurante O
 este O
@@ -1456,22 +1374,19 @@ semana O
 marzo O
 2009 O
 ) O
-. O
 
-El START
-servicio I-positive
+El I-positive
+servicio O
 realmente O
 malo O
-. O
 
-El START
-changet I-positive
+El I-positive
+changet O
 era O
 salmuera O
-. O
 
-Las START
-mesas I-positive
+Las I-positive
+mesas O
 son O
 grandes O
 y O
@@ -1482,10 +1397,9 @@ ellas O
 es O
 bastante O
 amplio O
-. O
 
-Decepcionante START
-experiencia I-positive
+Decepcionante I-positive
+experiencia O
 . O
 La O
 carta O
@@ -1512,10 +1426,9 @@ ninguna O
 de O
 las O
 referencias O
-. O
 
-Hicimos START
-unos I-positive
+Hicimos I-positive
+unos O
 entrantes O
 variados O
 de O
@@ -1523,16 +1436,14 @@ inicio O
 , O
 bastante O
 buenos O
-! O
 
-Escriba START
-aquí I-positive
+Escriba I-positive
+aquí O
 su O
 comentario O
-… O
 
-No START
-se B-neutral
+No B-neutral
+se O
 puede O
 encontrar O
 mejor O
@@ -1542,10 +1453,9 @@ calidad O
 precio O
 en O
 Zaragoza O
-. O
 
-La START
-carta B-negative
+La B-negative
+carta O
 tiene O
 platos O
 muy O
@@ -1559,24 +1469,20 @@ el O
 trato O
 es O
 correcto O
-. O
 
-poca START
-amabilidad I-positive
+poca I-positive
+amabilidad O
 del O
 maitre O
-. O
 
-Muy START
-bien I-positive
-. O
+Muy I-positive
+bien O
 
-es START
-lo I-positive
-mejor O
+es I-positive
+lo O
 
-La START
-comida B-negative
+La B-negative
+comida O
 es O
 buena O
 y O
@@ -1608,20 +1514,18 @@ y O
 con O
 toldos O
 bajados O
-. O
 
-Cena START
-de B-positive
+Cena B-positive
+de O
 pareja O
 en O
 restaurante O
 especial O
 para O
 nosotros O
-. O
 
-Sr START
-. I-positive
+Sr I-positive
+. O
 Gonzalo O
 López O
 Madrazo.Estoy O
@@ -1662,10 +1566,9 @@ perfecto O
 , O
 gracias O
 ” O
-. O
 
-Por START
-cierto I-positive
+Por I-positive
+cierto O
 , O
 pagar O
 casi O
@@ -1677,10 +1580,9 @@ cubiertos O
 me O
 molesta O
 siempre O
-. O
 
-Tuve START
-que I-positive
+Tuve I-positive
+que O
 decir O
 que O
 tenía O
@@ -1692,17 +1594,14 @@ aún O
 me O
 lo O
 negaban O
-. O
 
-Volveremos START
-. I-positive
+Volveremos I-positive
 
-Muy START
-recomendable I-positive
-. O
+Muy I-positive
+recomendable O
 
-Algo START
-insípida I-positive
+Algo I-positive
+insípida O
 , O
 le O
 faltaba O
@@ -1723,10 +1622,9 @@ y O
 no O
 lo O
 recomiendo O
-. O
 
-La START
-bebida B-negative
+La B-negative
+bebida O
 ha O
 dejado O
 que O
@@ -1801,10 +1699,9 @@ como O
 rebozar O
 paredes O
 viejas O
-. O
 
-La START
-bodega B-negative
+La B-negative
+bodega O
 suficiente O
 y O
 con O
@@ -1817,10 +1714,9 @@ y O
 a O
 precios O
 adecuados O
-. O
 
-Tras START
-interesarme I-positive
+Tras I-positive
+interesarme O
 por O
 ese O
 ‘ O
@@ -1859,13 +1755,11 @@ se O
 me O
 cobra O
 1 O
-. O
 
-Repetiré START
-! I-positive
+Repetiré I-positive
 
-servicio START
-estupendo I-positive
+servicio I-positive
+estupendo O
 , O
 brasas O
 de O
@@ -1875,10 +1769,9 @@ con O
 alcachofas O
 y O
 parriladas O
-. O
 
-Y START
-el I-positive
+Y I-positive
+el O
 Menú O
 especial O
 no O
@@ -1889,9 +1782,8 @@ sino O
 a O
 27 O
 euros O
-. O
 
-Tampoco START
+Tampoco O
 se O
 cree O
 que O
@@ -1983,15 +1875,13 @@ nos O
 vamos O
 a O
 casa O
-. O
 
-NO START
-LO I-positive
+NO I-positive
+LO O
 RECOMIENDO O
-. O
 
-La START
-calidad B-negative
+La B-negative
+calidad O
 de O
 la O
 comida O
@@ -2002,10 +1892,9 @@ así O
 como O
 el O
 servicio O
-. O
 
-Platos START
-mal I-positive
+Platos I-positive
+mal O
 presentados O
 , O
 sobrevolando O
@@ -2014,10 +1903,9 @@ cabezas O
 de O
 los O
 comensales O
-. O
 
-Aunque START
-advertimos I-positive
+Aunque I-positive
+advertimos O
 de O
 q O
 a O
@@ -2052,26 +1940,23 @@ a O
 la O
 riojana O
 ) O
-. O
 
-Estuve START
-en I-positive
+Estuve I-positive
+en O
 el O
 restaurante O
 el O
 12-9- O
 2009 O
-. O
 
-De START
-todas I-positive
+De I-positive
+todas O
 formas O
 decidimos O
 quedarnos O
-. O
 
-<+> START
-La I-positive
+<+> I-positive
+La O
 extraordinaria O
 calidad O
 del O
@@ -2083,43 +1968,37 @@ los O
 pescados O
 y O
 mariscos O
-. O
 
-Prefiero START
-no I-positive
+Prefiero I-positive
+no O
 opinar O
 por O
 el O
 desengaño O
 que O
 tuve O
-. O
 
-Fue START
-todo I-positive
+Fue I-positive
+todo O
 una O
 experiencia O
-. O
 
-Gonzalo START
 
-Aperitivos START
-: I-positive
+Aperitivos I-positive
+: O
 Tartar O
 de O
 bacalao O
-. O
 
-Un START
-sitio B-negative
+Un B-negative
+sitio O
 tranquilo O
 con O
 pocas O
 mesas O
-. O
 
-El START
-bacalao B-negative
+El B-negative
+bacalao O
 al O
 horno O
 ( O
@@ -2172,13 +2051,11 @@ una O
 comida O
 bastante O
 mediocre O
-. O
 
-Muy START
-correcto I-positive
+Muy I-positive
 
-Croquetas START
-oleosas I-positive
+Croquetas I-positive
+oleosas O
 , O
 salmón O
 marinado O
@@ -2211,21 +2088,18 @@ carpaccio O
 de O
 rape O
 testimonial O
-. O
 
-Los START
-postres I-positive
+Los I-positive
+postres O
 buenos O
-. O
 
-Esta START
-bien I-positive
+Esta I-positive
+bien O
 la O
 verdad O
-! O
 
-Y START
-no I-positive
+Y I-positive
+no O
 solo O
 es O
 la O
@@ -2279,23 +2153,20 @@ su O
 carta O
 de O
 puros O
-. O
 
-El START
-servicio B-negative
+El B-negative
+servicio O
 no O
 esta O
 a O
 la O
 altura O
-. O
 
-Todo START
-excelente I-positive
-. O
+Todo I-positive
+excelente O
 
-Y START
-poner I-positive
+Y I-positive
+poner O
 “ O
 piedras O
 ” O
@@ -2317,25 +2188,22 @@ no O
 tiene O
 nombre O
 ! O
-! O
 
-Buen START
-servicio I-positive
+Buen I-positive
+servicio O
 y O
 buen O
 ambiente O
-. O
 
-La START
-relación B-negative
+La B-negative
+relación O
 calidad-precio O
 , O
 muy O
 buena O
-. O
 
-Calidad START
-/ I-positive
+Calidad I-positive
+/ O
 Precio O
 : O
 elevado O
@@ -2376,10 +2244,9 @@ me O
 encuentro O
 mas O
 agusto O
-. O
 
-A START
-mí I-positive
+A I-positive
+mí O
 personalmente O
 no O
 me O
@@ -2442,10 +2309,9 @@ una O
 menor O
 facturación O
 ) O
-. O
 
-No START
-, B-negative
+No B-negative
+, O
 de O
 hecho O
 eran O
@@ -2463,10 +2329,9 @@ un O
 menú O
 de O
 degustación O
-. O
 
-Fui START
-con I-positive
+Fui I-positive
+con O
 unos O
 amigos O
 mejicanos O
@@ -2498,10 +2363,9 @@ más O
 una O
 vez O
 terminados O
-. O
 
-Mi START
-postre I-positive
+Mi I-positive
+postre O
 se O
 podía O
 comer O
@@ -2515,16 +2379,14 @@ con O
 helado O
 de O
 coco O
-. O
 
-Ofrecen START
-merluza I-positive
+Ofrecen I-positive
+merluza O
 con O
 salsa O
-. O
 
-Ayer START
-fui I-positive
+Ayer I-positive
+fui O
 con O
 dos O
 amigos O
@@ -2548,10 +2410,9 @@ preparada O
 aunque O
 llegamos O
 tarde O
-. O
 
-La START
-pena B-negative
+La B-negative
+pena O
 es O
 que O
 la O
@@ -2566,26 +2427,23 @@ carta O
 no O
 era O
 tal O
-. O
 
-la START
-iluminación I-positive
+la I-positive
+iluminación O
 un O
 poco O
 escasa O
 , O
 pero O
 acogedora O
-. O
 
-Recomiendo START
-los I-positive
+Recomiendo I-positive
+los O
 calçots O
 rebozados O
-. O
 
-La START
-calidad B-negative
+La B-negative
+calidad O
 aceptable O
 , O
 pero O
@@ -2633,10 +2491,9 @@ los O
 Camareros O
 , O
 inmejorable O
-. O
 
-Grandes START
-celebraciones I-positive
+Grandes I-positive
+celebraciones O
 de O
 amigos O
 con O
@@ -2647,15 +2504,13 @@ cariñosa O
 en O
 el O
 trato O
-.. O
 
-Repetiremos START
-seguro I-positive
-! O
+Repetiremos I-positive
+seguro O
 ! O
 
-Puedo START
-entender I-positive
+Puedo I-positive
+entender O
 30 O
 minutos O
 de O
@@ -2680,16 +2535,14 @@ pero O
 hora O
 y O
 media O
-? O
 
-El START
-ambiente B-negative
+El B-negative
+ambiente O
 muy O
 acogedor O
-. O
 
-38 START
-euros I-positive
+38 I-positive
+euros O
 con O
 bodega O
 incluida.Los O
@@ -2722,10 +2575,9 @@ meloso O
 de O
 setas O
 ) O
-. O
 
-Restaurante START
-muy B-positive
+Restaurante B-positive
+muy O
 recomendado O
 , O
 servicio O
@@ -2736,10 +2588,9 @@ y O
 un O
 menu O
 exquisito O
-. O
 
-He START
-ido I-positive
+He I-positive
+ido O
 un O
 par O
 de O
@@ -2757,10 +2608,9 @@ carta O
 un O
 10 O
 ! O
-. O
 
-Fuimos START
-un I-positive
+Fuimos I-positive
+un O
 grupo O
 numeroso O
 , O
@@ -2774,20 +2624,17 @@ fenomenal O
 y O
 muy O
 efectivos O
-. O
 
-Cuando START
-vuelva B-neutral
+Cuando B-neutral
+vuelva O
 a O
 Barcelona O
 repetiré O
-. O
 
-Buen START
-servicio I-positive
+Buen I-positive
 
-El START
-servicio B-negative
+El B-negative
+servicio O
 excelente O
 ... O
 aunque O
@@ -2817,10 +2664,9 @@ delante O
 de O
 los O
 clientes O
-. O
 
-Raciones START
-generosas I-positive
+Raciones I-positive
+generosas O
 y O
 precios O
 cerrados O
@@ -2833,10 +2679,9 @@ es O
 muy O
 raro O
 actualmente O
-. O
 
-El START
-lugar B-negative
+El B-negative
+lugar O
 es O
 precioso O
 y O
@@ -2857,12 +2702,10 @@ con O
 elegancia O
 quieran O
 disfrutar O
-. O
 
-Saludos START
 
-Algunos START
-platos I-positive
+Algunos I-positive
+platos O
 son O
 excesivamente O
 caros O
@@ -2878,10 +2721,9 @@ no O
 nos O
 ha O
 sorprendido O
-. O
 
-Muy START
-original I-positive
+Muy I-positive
+original O
 presentación O
 y O
 muy O
@@ -2896,10 +2738,9 @@ un O
 poco O
 más O
 tradicionales O
-: O
 
-Seguro START
-que I-positive
+Seguro I-positive
+que O
 no O
 te O
 quedas O
@@ -2909,23 +2750,20 @@ y O
 la O
 claidad O
 excelente O
-. O
 
-una START
-decepción I-positive
+una I-positive
 
-Paella START
-coloreada B-negative
+Paella B-negative
+coloreada O
 bañada O
 de O
 aceite O
 , O
 gamba O
 immunda O
-. O
 
-Pedimos START
-ensalada I-positive
+Pedimos I-positive
+ensalada O
 de O
 espinacas O
 , O
@@ -2936,10 +2774,9 @@ y O
 pulpo O
 con O
 langostinos O
-. O
 
-Cenar START
-en I-positive
+Cenar I-positive
+en O
 la O
 terraza O
 : O
@@ -2967,10 +2804,9 @@ pero O
 vale O
 la O
 pena O
-. O
 
-El START
-sitio B-negative
+El B-negative
+sitio O
 es O
 muy O
 agradable O
@@ -2981,19 +2817,17 @@ muy O
 simpáticos O
 y O
 atentos O
-. O
 
-Servian START
-el I-positive
+Servian I-positive
+el O
 vino O
 regando O
 toda O
 la O
 mesa O
-. O
 
-Con START
-lo I-positive
+Con I-positive
+lo O
 cual O
 en O
 el O
@@ -3021,9 +2855,8 @@ de O
 una O
 estrella O
 michelin O
-. O
 
-El START
+El O
 sábado O
 01-11- O
 14 O
@@ -3170,15 +3003,13 @@ el O
 menú O
 que O
 tomamos O
-. O
 
-100 START
-% I-positive
+100 I-positive
+% O
 recomendable O
-! O
 
-Tomamos START
-Vacío I-positive
+Tomamos I-positive
+Vacío O
 y O
 Entrañas O
 ( O
@@ -3196,23 +3027,20 @@ de O
 su O
 carne O
 ) O
-. O
 
-Nos START
-sirvieron I-positive
+Nos I-positive
+sirvieron O
 con O
 agilidad O
 , O
 sin O
 esperas O
-. O
 
-Los START
-calçots I-positive
-buenisimos O
+Los I-positive
+calçots O
 
-No START
-son B-negative
+No B-negative
+son O
 platos O
 rimbombantes O
 ( O
@@ -3240,10 +3068,9 @@ comer O
 y O
 estaban O
 bien O
-. O
 
-En START
-la B-negative
+En B-negative
+la O
 cocina O
 debían O
 estar O
@@ -3270,10 +3097,9 @@ avecrem O
 , O
 sin O
 mas O
-. O
 
-La START
-luz B-negative
+La B-negative
+luz O
 natural O
 que O
 entra O
@@ -3301,10 +3127,9 @@ conseguir O
 en O
 otros O
 lugares O
-. O
 
-Por START
-la I-positive
+Por I-positive
+la O
 tarde O
 realizamos O
 el O
@@ -3317,42 +3142,37 @@ toda O
 la O
 tarde O
 bañandonos O
-. O
 
-¿ START
-Te I-positive
+¿ I-positive
+Te O
 sacan O
 lo O
 mismo O
 que O
 a O
 8 O
-? O
 
-<+> START
-entrantes I-positive
+<+> I-positive
+entrantes O
 pasables O
 - O
 normal O
 de O
-sabor O
 
-Maginifica START
-relacion I-positive
+Maginifica I-positive
+relacion O
 calidad O
 precio O
-. O
 
-El START
-servicio B-negative
+El B-negative
+servicio O
 , O
 mas O
 que O
 correcto O
-. O
 
-- START
-Jarrete I-positive
+- I-positive
+Jarrete O
 a O
 baja O
 temperatura O
@@ -3362,10 +3182,9 @@ caramelizada O
 y O
 puré O
 trufado O
-. O
 
-La START
-comida B-negative
+La B-negative
+comida O
 insuperable O
 , O
 fresca O
@@ -3378,13 +3197,11 @@ muy O
 original O
 y O
 creativa O
-. O
 
-Para START
-olvidar I-positive
+Para I-positive
 
-Las START
-copas I-positive
+Las I-positive
+copas O
 económicas O
 , O
 y O
@@ -3439,24 +3256,21 @@ un O
 pastón O
 . O
 Volvere O
-? O
 
-El START
-resto B-negative
+El B-negative
+resto O
 de O
 la O
 comida O
 normal O
-. O
 
-El START
-servicio I-positive
+El I-positive
+servicio O
 muy O
 atento O
-. O
 
-yo START
-doy I-positive
+yo I-positive
+doy O
 fe O
 de O
 que O
@@ -3466,30 +3280,26 @@ sabia O
 nada O
 de O
 nada O
-. O
 
-Muchas START
-gracias I-positive
+Muchas I-positive
+gracias O
 en O
 Mayúsculas O
 ! O
 ! O
-! O
 
-Pero START
-hoy I-positive
+Pero I-positive
+hoy O
 será O
 la O
 última O
-. O
 
-Nosotros START
-no I-positive
+Nosotros I-positive
+no O
 volveremos O
-. O
 
-Caro START
-por I-positive
+Caro I-positive
+por O
 lo O
 que O
 dan O
@@ -3502,10 +3312,9 @@ juntas O
 y O
 bastante O
 ruido O
-. O
 
-La START
-comida B-negative
+La B-negative
+comida O
 y O
 el O
 servicio O
@@ -3516,10 +3325,9 @@ el O
 precio O
 mejor O
 todavía O
-. O
 
-Una START
-vez I-positive
+Una I-positive
+vez O
 dentro O
 la O
 decoracion O
@@ -3575,10 +3383,9 @@ enfadado O
 con O
 mi O
 mujer O
-. O
 
-Con START
-el I-positive
+Con I-positive
+el O
 nivel O
 que O
 cada O
@@ -3618,10 +3425,9 @@ simple O
 aceite O
 de O
 cebollino O
-. O
 
-Ha START
-sido I-positive
+Ha I-positive
+sido O
 nuestra O
 prinera O
 visita O
@@ -3637,10 +3443,9 @@ próximas O
 escapadas O
 a O
 Barcelona O
-. O
 
-He START
-de I-positive
+He I-positive
+de O
 decir O
 que O
 nunca O
@@ -3665,10 +3470,9 @@ y O
 nos O
 lo O
 mostró O
-. O
 
-Espero START
-que I-positive
+Espero I-positive
+que O
 no O
 se O
 olvide O
@@ -3684,10 +3488,9 @@ muy O
 ajustado O
 y O
 sabroso O
-. O
 
-la START
-terraza I-positive
+la I-positive
+terraza O
 con O
 sillas O
 de O
@@ -3698,10 +3501,9 @@ misma O
 linea O
 de O
 elegancia O
-. O
 
-Han START
-quitado I-positive
+Han I-positive
+quitado O
 la O
 carta O
 de O
@@ -3726,25 +3528,22 @@ de O
 calidad O
 muy O
 básica O
-. O
 
-Los START
-hemos I-positive
+Los I-positive
+hemos O
 probado O
 infinitamente O
 mejores O
 en O
 otros O
 restaurantes O
-... O
 
-Servico START
-muy I-positive
+Servico I-positive
+muy O
 amable O
-. O
 
-La START
-comida B-negative
+La B-negative
+comida O
 , O
 la O
 presentación O
@@ -3753,10 +3552,9 @@ el O
 servicio O
 muy O
 buenos O
-. O
 
-Para START
-mi I-positive
+Para I-positive
+mi O
 gusto O
 , O
 la O
@@ -3770,14 +3568,12 @@ en O
 el O
 punto O
 justo O
-. O
 
-sorpresa START
-agradable I-positive
-. O
+sorpresa I-positive
+agradable O
 
-esta START
-ultima I-positive
+esta I-positive
+ultima O
 es O
 la O
 mejor O
@@ -3811,10 +3607,9 @@ te O
 quedas O
 con O
 hambre O
-. O
 
-Nada START
-que I-positive
+Nada I-positive
+que O
 objetar O
 a O
 la O
@@ -3844,10 +3639,9 @@ se O
 merecería O
 el O
 restaurante O
-. O
 
-Pensabamos START
-que I-positive
+Pensabamos I-positive
+que O
 era O
 un O
 despiste O
@@ -3890,35 +3684,31 @@ lado O
 con O
 su O
 señora O
-. O
 
-Estupendo START
-el I-positive
+Estupendo I-positive
+el O
 cabrito O
-. O
 
-Intento START
-de I-positive
+Intento I-positive
+de O
 buscar O
 mesa O
 libre O
 arriba O
 y O
 abajo O
-. O
 
-para START
-describir I-positive
+para I-positive
+describir O
 a O
 este O
 ya O
 clásico O
 en O
 Barcelona O
-. O
 
-Hace START
-una I-positive
+Hace I-positive
+una O
 semana O
 fuimos O
 por O
@@ -3953,10 +3743,9 @@ la O
 cena O
 fue O
 satisfactoria O
-. O
 
-Lamentablemente START
-la I-positive
+Lamentablemente I-positive
+la O
 relación O
 calidad-precio O
 me O
@@ -3976,10 +3765,9 @@ la O
 altura O
 del O
 precio O
-. O
 
-Se START
-pasa I-positive
+Se I-positive
+pasa O
 un O
 muy O
 buen O
@@ -3987,14 +3775,12 @@ rato O
 en O
 este O
 restaurante O
-. O
 
-Recomendable START
-100 I-positive
-% O
+Recomendable I-positive
+100 O
 
-Muy START
-buen I-positive
+Muy I-positive
+buen O
 trato O
 , O
 muy O
@@ -4010,10 +3796,9 @@ de O
 menú O
 comiendo O
 calidad O
-. O
 
-PD START
-: I-positive
+PD I-positive
+: O
 Supongo O
 que O
 a O
@@ -4050,18 +3835,16 @@ sea O
 de O
 paso O
 ) O
-. O
 
-Muy START
-buena I-positive
+Muy I-positive
+buena O
 la O
 comida O
 y O
 la O
-atencion O
 
-Hemos START
-comido I-positive
+Hemos I-positive
+comido O
 muy O
 a O
 gusto O
@@ -4074,10 +3857,9 @@ el O
 sitio O
 muy O
 acogedor O
-. O
 
-en START
-mi I-positive
+en I-positive
+mi O
 opinion O
 es O
 un O
@@ -4096,10 +3878,9 @@ en O
 servicio O
 y O
 comida O
-. O
 
-No START
-te B-negative
+No B-negative
+te O
 importa O
 pagar O
 por O
@@ -4109,10 +3890,9 @@ servido O
 y O
 comer O
 bien O
-. O
 
-Los START
-postres I-positive
+Los I-positive
+postres O
 , O
 como O
 si O
@@ -4121,28 +3901,24 @@ un O
 concurso O
 de O
 miniaturas O
-. O
 
-Espectacular START
-y I-positive
+Espectacular I-positive
+y O
 muy O
 sabroso O
-. O
 
-Recomendadisimo START
-! I-positive
+Recomendadisimo I-positive
 
-Necesitan START
-mejorar I-positive
+Necesitan I-positive
+mejorar O
 si O
 quieren O
 seguir O
 cobrando O
 eso O
-. O
 
-Al START
-llegar I-positive
+Al I-positive
+llegar O
 nos O
 cambiaron O
 a O
@@ -4160,16 +3936,14 @@ que O
 estuviéramos O
 más O
 tranquilos O
-. O
 
-Un START
-imprescindible B-negative
+Un B-negative
+imprescindible O
 de O
 Zaragoza O
-. O
 
-Si START
-mantienen I-positive
+Si I-positive
+mantienen O
 el O
 nivel O
 de O
@@ -4185,10 +3959,9 @@ aire O
 fresco O
 en O
 Zaragoza O
-. O
 
-Camareros START
-simpáticos I-positive
+Camareros I-positive
+simpáticos O
 , O
 comida O
 apreciable O
@@ -4215,20 +3988,18 @@ que O
 molesta O
 más O
 del O
-necesario O
 
-Ideal START
-para I-positive
+Ideal I-positive
+para O
 cenas O
 de O
 4 O
 a O
 8 O
 personas O
-. O
 
-Deberían START
-revisar I-positive
+Deberían I-positive
+revisar O
 las O
 raciones O
 que O
@@ -4238,18 +4009,16 @@ son O
 realmente O
 escasas O
 ! O
-! O
 
-Servicio START
-inmejorable I-positive
+Servicio I-positive
+inmejorable O
 y O
 la O
 cena O
 fantástica O
-. O
 
-Finalmente START
-me I-positive
+Finalmente I-positive
+me O
 gustaría O
 agradecerle O
 que O
@@ -4289,10 +4058,9 @@ y O
 usted O
 la O
 suya O
-. O
 
-fui START
-con I-positive
+fui I-positive
+con O
 unos O
 clientes O
 erabamos O
@@ -4300,10 +4068,9 @@ erabamos O
 y O
 nos O
 encanto O
-. O
 
-la START
-cena I-positive
+la I-positive
+cena O
 muy O
 rica O
 y O
@@ -4311,10 +4078,9 @@ el O
 servicio O
 muy O
 atento O
-. O
 
-Supongo START
-que I-positive
+Supongo I-positive
+que O
 como O
 era O
 tarde O
@@ -4328,10 +4094,9 @@ Jordi O
 no O
 pudieron O
 contestar O
-. O
 
-Ambiente START
-- B-positive
+Ambiente B-positive
+- O
 9 O
 ( O
 bueno O
@@ -4348,10 +4113,9 @@ que O
 fue O
 el O
 caso O
-) O
 
-La START
-especialidad B-neutral
+La B-neutral
+especialidad O
 del O
 restaurante O
 ( O
@@ -4361,17 +4125,15 @@ patatas O
 ) O
 es O
 espectacular O
-. O
 
-Servicio START
-muy I-positive
+Servicio I-positive
+muy O
 atento O
 y O
 agradable O
-. O
 
-Afirmar START
-que I-positive
+Afirmar I-positive
+que O
 en O
 ese O
 local O
@@ -4384,10 +4146,9 @@ es O
 una O
 auténtica O
 temeridad O
-. O
 
-Yo START
-vi I-positive
+Yo I-positive
+vi O
 por O
 ejemplo O
 un O
@@ -4412,10 +4173,9 @@ teníamos O
 a O
 nuestro O
 lado O
-. O
 
-Calidad START
-excelente I-positive
+Calidad I-positive
+excelente O
 , O
 carta O
 extensísima O
@@ -4433,10 +4193,9 @@ ensalzan O
 todo O
 lo O
 dicho O
-. O
 
-Asi START
-que I-positive
+Asi I-positive
+que O
 el O
 descuento O
 es O
@@ -4452,16 +4211,14 @@ en O
 el O
 menu O
 ) O
-. O
 
-Lo START
-recomiendo I-positive
-! O
+Lo I-positive
+recomiendo O
 ! O
 ! O
 
-Totalmente START
-recomendable I-positive
+Totalmente I-positive
+recomendable O
 para O
 una O
 comida O
@@ -4471,10 +4228,9 @@ con O
 aroma O
 a O
 brasa O
-. O
 
-Buena START
-voluntad I-positive
+Buena I-positive
+voluntad O
 pero O
 exceso O
 d O
@@ -4511,10 +4267,9 @@ nos O
 lo O
 cambiaron O
 sin O
-coste O
 
-Venga START
-no I-positive
+Venga I-positive
+no O
 es O
 tan O
 dificil O
@@ -4522,10 +4277,9 @@ dificil O
 p O
 . O
 e O
-. O
 
-Tomamos START
-una I-positive
+Tomamos I-positive
+una O
 ensalada O
 , O
 unas O
@@ -4567,17 +4321,15 @@ menos O
 Y O
 el O
 espectáculo O
-? O
 
-Todo START
-a I-positive
+Todo I-positive
+a O
 sumar O
 el O
 iva O
-. O
 
-Extremadamente START
-juntas I-positive
+Extremadamente I-positive
+juntas O
 las O
 mesas O
 . O
@@ -4586,10 +4338,9 @@ platos O
 sin O
 sabor O
 alguno O
-. O
 
-Había START
-un I-positive
+Había I-positive
+un O
 nivel O
 de O
 ruido O
@@ -4618,10 +4369,9 @@ prácticamente O
 lo O
 que O
 quisieron O
-. O
 
-Hacía START
-tiempo I-positive
+Hacía I-positive
+tiempo O
 no O
 me O
 encontraba O
@@ -4638,10 +4388,9 @@ y O
 así O
 ha O
 sido O
-. O
 
-Todo START
-fantástico I-positive
+Todo I-positive
+fantástico O
 , O
 buenas O
 raciones O
@@ -4664,10 +4413,9 @@ mono O
 pequeñito O
 y O
 acogedor O
-. O
 
-Tampoco START
-nos I-positive
+Tampoco I-positive
+nos O
 avisaron O
 que O
 era O
@@ -4675,41 +4423,36 @@ menu O
 cerrado O
 ese O
 dia O
-. O
 
-Si START
-lo I-positive
+Si I-positive
+lo O
 mantienen O
 , O
 el O
 próximo O
 año O
 repetiremos O
-! O
 
-La START
-salsa B-negative
+La B-negative
+salsa O
 estaba O
 muy O
 buena O
 también O
-. O
 
-Buena START
-relación I-positive
+Buena I-positive
+relación O
 calidad O
 / O
 precio O
-. O
 
-El START
-servicio I-positive
+El I-positive
+servicio O
 fue O
 perfecto O
-. O
 
-no START
-cuiden B-neutral
+no B-neutral
+cuiden O
 al O
 client O
 ; O
@@ -4728,10 +4471,9 @@ encant O
 ¡ O
 un O
 desastre O
-! O
 
-Excelente START
-la I-positive
+Excelente I-positive
+la O
 atención O
 de O
 todo O
@@ -4796,17 +4538,15 @@ aquel O
 de O
 buen O
 paladar O
-. O
 
-Yo START
-acerté I-positive
+Yo I-positive
+acerté O
 con O
 el O
 postre O
-. O
 
-Se START
-lo I-positive
+Se I-positive
+lo O
 hicimos O
 saber O
 al O
@@ -4838,10 +4578,9 @@ pero O
 aún O
 así O
 … O
-. O
 
-Hablé START
-con I-positive
+Hablé I-positive
+con O
 el O
 restaurante O
 la O
@@ -4861,10 +4600,9 @@ tenían O
 para O
 entre O
 semana O
-. O
 
-Entre START
-otras I-positive
+Entre I-positive
+otras O
 cosas O
 tengo O
 una O
@@ -4884,18 +4622,16 @@ mesa O
 mientras O
 está O
 comiendo O
-. O
 
-Solo START
-para I-positive
+Solo I-positive
+para O
 emergencias O
 , O
 no O
 recomendable O
-. O
 
-Íbamos START
-ya I-positive
+Íbamos I-positive
+ya O
 con O
 la O
 idea O
@@ -4908,10 +4644,9 @@ y O
 así O
 lo O
 hicimos O
-. O
 
-Cenamos START
-ayer I-positive
+Cenamos I-positive
+ayer O
 sabado O
 , O
 por O
@@ -4920,26 +4655,23 @@ aniversario O
 , O
 2 O
 personas O
-. O
 
-Local START
-de I-positive
+Local I-positive
+de O
 ambiente O
 agradable O
-. O
 
-Pedimos START
-menu I-positive
+Pedimos I-positive
+menu O
 de O
 calçots O
 y O
 valia O
 la O
 pena O
-. O
 
-No START
-entndemos B-negative
+No B-negative
+entndemos O
 para O
 qué O
 nos O
@@ -4956,10 +4688,9 @@ al O
 hacer O
 la O
 reserva O
-. O
 
-Excelente START
-reforma I-positive
+Excelente I-positive
+reforma O
 y O
 exquisita O
 comida O
@@ -4968,17 +4699,15 @@ un O
 precio O
 muy O
 interesante O
-.. O
 
-Excelente START
-arroz I-positive
+Excelente I-positive
+arroz O
 y O
 buen O
 trato O
-. O
 
-Mi START
-padre I-positive
+Mi I-positive
+padre O
 y O
 mi O
 hermano O
@@ -5015,20 +4744,17 @@ familia O
 les O
 gusta O
 mucho O
-. O
 
-Buen START
-trato I-positive
+Buen I-positive
+trato O
 y O
 buena O
-comida O
 
-Inmejorables START
-vistas I-positive
-. O
+Inmejorables I-positive
+vistas O
 
-Nos START
-ofrecieron I-positive
+Nos I-positive
+ofrecieron O
 tres O
 primeros O
 , O
@@ -5127,18 +4853,16 @@ servido O
 sin O
 las O
 huevas O
-. O
 
-Todo START
-lo I-positive
+Todo I-positive
+lo O
 que O
 probamos O
 nos O
 encantó O
-. O
 
-Mi START
-acompañante I-positive
+Mi I-positive
+acompañante O
 una O
 sopa O
 de O
@@ -5168,22 +4892,19 @@ acaba O
 de O
 comer O
 enseguida O
-. O
 
-Todo START
-estuvo I-positive
+Todo I-positive
+estuvo O
 muy O
-bien O
 
-Buena START
-calidad I-positive
+Buena I-positive
+calidad O
 y O
 precio O
 razonable O
-. O
 
-he START
-ido I-positive
+he I-positive
+ido O
 varias O
 veces O
 pero O
@@ -5216,10 +4937,9 @@ cuanto O
 a O
 las O
 reservas O
-. O
 
-Atención START
-buena I-positive
+Atención I-positive
+buena O
 del O
 camarero O
 , O
@@ -5235,10 +4955,9 @@ atención O
 para O
 pedir O
 algo O
-. O
 
-El START
-resto B-neutral
+El B-neutral
+resto O
 de O
 platos O
 no O
@@ -5250,10 +4969,9 @@ un O
 restaurante O
 de O
 nivel O
-. O
 
-La START
-comida B-negative
+La B-negative
+comida O
 y O
 el O
 servio O
@@ -5270,10 +4988,9 @@ hemos O
 terminado O
 de O
 cenar O
-. O
 
-En START
-general B-negative
+En B-negative
+general O
 mantiene O
 la O
 calidad O
@@ -5291,10 +5008,9 @@ vinos O
 son O
 demasiado O
 altos O
-. O
 
-Las START
-opiniones I-positive
+Las I-positive
+opiniones O
 que O
 leí O
 , O
@@ -5305,10 +5021,9 @@ ir O
 me O
 confundieron O
 totalmente O
-. O
 
-el START
-menu I-positive
+el I-positive
+menu O
 me O
 parece O
 muy O
@@ -5372,20 +5087,17 @@ vuestro O
 restaurant O
 hasta O
 luego O
-. O
 
-Nos START
-ha I-positive
+Nos I-positive
+ha O
 encantado O
-. O
 
-el START
-servicio I-positive
+el I-positive
+servicio O
 impecable O
-. O
 
-Hola START
-Jose I-positive
+Hola I-positive
+Jose O
 Carlos O
 : O
 en O
@@ -5429,10 +5141,9 @@ de O
 buena O
 calidad O
 también O
-. O
 
-Magnífica START
-propuesta I-positive
+Magnífica I-positive
+propuesta O
 , O
 lúdica O
 y O
@@ -5457,10 +5168,9 @@ primarias O
 del O
 ser O
 humano O
-. O
 
-Para START
-mí I-positive
+Para I-positive
+mí O
 prohibitivo O
 en O
 estos O
@@ -5482,10 +5192,9 @@ sólo O
 hay O
 cinco O
 mesas O
-. O
 
-Gracias START
-a I-positive
+Gracias I-positive
+a O
 los O
 dos O
 por O
@@ -5528,10 +5237,9 @@ bajas O
 a O
 los O
 infiernos O
-. O
 
-15.01 START
-. I-positive
+15.01 I-positive
+. O
 09 O
 vieira O
 con O
@@ -5541,10 +5249,9 @@ sopa O
 € O
 sin O
 gusto O
-. O
 
-Los START
-camareros I-positive
+Los I-positive
+camareros O
 muy O
 majos O
 y O
@@ -5556,5 +5263,4 @@ nos O
 faltara O
 de O
 nada O
-! O
 
