@@ -1,6 +1,7 @@
 import numpy as np
 from numpy.random import randn
 from data import convert_label, get_labelled_data, prep_y, rnn_inputs, softmax
+import math
 
 
 class RNN:
@@ -159,7 +160,7 @@ class RNN:
                 # print('one hot encoded x', x)
 
             # Iterate through the encoded X and predict
-            for idx, word in enumerate(np.asarray(encodedX)):
+            for _, word in enumerate(np.asarray(encodedX)):
                 h = np.zeros((self.Whh.shape[0], 1))
 
                 # Forward
