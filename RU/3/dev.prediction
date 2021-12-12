@@ -222,7 +222,7 @@
 Зал I-positive
 замечательный O
 
-Качество I-positive
+Качество B-neutral
 еды O
 , O
 нормальное O
@@ -436,7 +436,7 @@
 остались O
 довольны O
 
-Обслуживание I-positive
+Обслуживание B-neutral
 не O
 навязчивое O
 , O
@@ -646,7 +646,7 @@
 рай O
 какой-то O
 
-Напитки B-neutral
+Напитки B-negative
 нам O
 принесли O
 сразу O
@@ -878,7 +878,7 @@
 заведении O
 время O
 
-Пиво O
+Пиво B-positive
 хорошее O
 , O
 не O
@@ -1030,7 +1030,7 @@
 раз O
 ! O
 
-А B-neutral
+А B-negative
 кальян O
 действительно O
 самый O
@@ -1089,7 +1089,7 @@
 не O
 было O
 
-Еда O
+Еда B-positive
 : O
 Решили O
 кроме O
@@ -1352,7 +1352,7 @@
 не O
 приходилось O
 
-Блюда B-neutral
+Блюда I-positive
 приносят O
 холодными O
 , O
@@ -1798,7 +1798,7 @@
 был O
 свободен O
 
-кафе B-neutral
+кафе B-negative
 на O
 время O
 приготовлений O
@@ -1874,7 +1874,7 @@
 винная O
 карта O
 
-Кухня B-negative
+Кухня O
 : O
 вкусно O
 , O
@@ -1933,7 +1933,7 @@
 фруктового O
 пюре O
 
-Порции I-positive
+Порции B-neutral
 большие O
 , O
 а O
@@ -2387,7 +2387,7 @@ Albertone O
 совершенно O
 неоправданные O
 
-А I-positive
+А B-negative
 музыкальное O
 сопровождение O
 это O
@@ -2571,7 +2571,7 @@ Albertone O
 рост O
 цен O
 
-Место O
+Место B-positive
 среднее O
 , O
 может O
@@ -2861,7 +2861,7 @@ Land O
 и O
 выше O
 
-Музыка B-positive
+Музыка B-negative
 непонятная O
 и O
 приторная O
@@ -3437,7 +3437,7 @@ bar-а O
 нем O
 комфортно O
 
-Ребята B-negative
+Ребята B-neutral
 , O
 как O
 оказалось O
@@ -3528,7 +3528,7 @@ bar-а O
 был O
 невкусным O
 
-А B-negative
+А B-neutral
 этим O
 ребятам O
 еще O
@@ -3597,7 +3597,7 @@ bar-а O
 и O
 разбираться O
 
-А B-negative
+А I-positive
 пошли O
 мы O
 в O
@@ -3722,7 +3722,7 @@ bar-а O
 они O
 есть O
 
-Салат I-positive
+Салат B-neutral
 грибной O
 тоже O
 хорош O
@@ -4349,7 +4349,7 @@ S I-positive
 в O
 первые O
 
-Музыка B-positive
+Музыка B-neutral
 из O
 динамиков O
 сначала O
@@ -4361,7 +4361,7 @@ S I-positive
 - O
 привыкли O
 
-Гардероб I-positive
+Гардероб B-neutral
 действительно O
 не O
 работал O
@@ -4703,7 +4703,7 @@ S I-positive
 бы O
 достаточно O
 
-Меню B-positive
+Меню I-positive
 очень O
 большое O
 , O
@@ -5069,7 +5069,7 @@ S I-positive
 ждали O
 сдачу O
 
-Еда B-neutral
+Еда B-negative
 понравилась O
 , O
 особенно O
@@ -5376,7 +5376,7 @@ S I-positive
 Всем I-positive
 рекомендуем O
 
-Сервис B-neutral
+Сервис I-positive
 очень O
 порадовал O
 : O
@@ -5739,7 +5739,7 @@ S I-positive
 свободных O
 мест O
 
-Кухня B-positive
+Кухня B-negative
 тоже O
 очень O
 порадовала O
@@ -5939,7 +5939,7 @@ P I-positive
 легкий O
 полумрак O
 
-интерьер B-negative
+интерьер O
 мне O
 понравился O
 . O
@@ -5961,7 +5961,7 @@ P I-positive
 ещё O
 чего O
 
-Столики B-positive
+Столики B-negative
 у O
 стенок O
 с O
@@ -6073,7 +6073,7 @@ P I-positive
 очень O
 вкусно O
 
-Атмосфера B-negative
+Атмосфера B-neutral
 заведения O
 тоже O
 порадовала O
@@ -7336,7 +7336,7 @@ P I-positive
 вашими O
 шедеврами O
 
-Меню B-positive
+Меню B-negative
 не O
 очень O
 удобно O
