@@ -19,11 +19,6 @@ class RNN:
         self.word_to_idx, self.idx_to_word, self.num_of_unique_words = word_to_idx, idx_to_word, num_of_unique_words
 
     def forward(self, inputs):
-        '''
-        Perform a forward pass of the RNN using the given inputs.
-        Returns the final output and hidden state.
-        - inputs is an array of one-hot vectors with shape (input_size, 1).
-        '''
         # print('inputs:', inputs.shape)
         h = np.zeros((self.Whh.shape[0], 1))
         self.prev_inputs = inputs

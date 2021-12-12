@@ -15,7 +15,7 @@ if __name__ == '__main__':
                  idx_to_word, num_of_unique_words)
 
     print("[ES] Training model...")
-    rnn_es.train(x_es, y_es, 10)
+    rnn_es.train(x_es, y_es, 100)
 
     # Russian Training
 
