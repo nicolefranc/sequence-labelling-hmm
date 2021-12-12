@@ -1,6 +1,6 @@
 import numpy as np
 from numpy.random import randn
-from data import get_labelled_data, prep_y, rnn_inputs, softmax
+from data import convert_label, get_labelled_data, prep_y, rnn_inputs, softmax
 
 
 class RNN:
@@ -117,9 +117,10 @@ class RNN:
                         # print('predwordidx', y_pred[word_idx])
 
                         # Formula: loss = y_i * log(yhat_i)
-                        loss += target[word_idx][i] * \
+                        loss -= target[word_idx][i] * \
                             np.log(y_pred[word_idx][i][0])
-                    loss_list.append(-(loss))
+                    # loss *= -1
+                    loss_list.append(loss)
 
                 # Calculate loss / accuracy
                 # print('ypred', y_pred)
@@ -137,31 +138,57 @@ class RNN:
             print(f'Epoch: {epoch}\tLoss: {loss}')
 
     def test(self, X):
-
+        Y = []
         for idx, sentence in enumerate(X):
-            if idx > 0:
-                break
+            # if idx > 2:
+            #     break
 
+            # print('sentence', sentence)
 
+            y_preds = []
+            encodedX = []
             word_idxs = []
-            for idx, word in enumerate(sentence):
+            for _, word in enumerate(sentence):
                 # Initialize input vector, x
                 x = np.zeros((self.num_of_unique_words, 1))
 
-                
-                word_idx = self.word_to_idx[word]
+                # One hot encoded the word
+                if word in self.word_to_idx.keys():
+                    word_idx = self.word_to_idx[word]
+                else:
+                    word_idx = np.random.randint(0, 7)
                 x[word_idx] = 1
                 word_idxs.append(word_idx)
-                print(x)
+                encodedX.append(x)
 
-                print('sentence', sentence)
-                
+                # print('one hot encoded x', x)
+
+            # Iterate through the encoded X and predict
+            for idx, word in enumerate(np.asarray(encodedX)):
                 h = np.zeros((self.Whh.shape[0], 1))
 
                 # Forward
-                h = np.tanh(np.dot(self.Wxh, x) + np.dot(self.Whh, h) + self.bh)
+                h = np.tanh(np.dot(self.Wxh, x) +
+                            np.dot(self.Whh, h) + self.bh)
                 y_pred_i = np.dot(self.Why, h) + self.by
                 y_pred = softmax(y_pred_i)
 
+                # print('y-pred', y_pred)
+                # print('y-pred ravel', y_pred.ravel())
+
                 # Get random index from the probability distribution of y
-                index = np.random.choice(range(self.num_of_unique_words), p=y_pred.ravel())
+                index = np.random.choice(
+                    range(7), p=y_pred.ravel())
+
+                # print('index', index)
+
+                # Re-initialize input vector, x
+                # x = np.zeros((self.num_of_unique_words, 1))
+                # encodedX[idx]
+                # label = convert_label(index)
+                y_preds.append(index)
+
+            Y.append(y_preds)
+
+        # print(Y)
+        return Y

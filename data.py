@@ -55,8 +55,8 @@ def convert_label(label: str, toInt: bool = True):
             return key
 
 
-def export_predictions_from_list(x_val: list, predictions: list, lang: str, part: int):
-    f = open(f'./{lang.upper()}/{part}/dev.prediction', 'w', encoding='utf-8')
+def export_predictions_from_list(x_val: list, predictions: list, lang: str, part: int, filename: str = 'dev.prediction'):
+    f = open(f'./{lang.upper()}/{part}/{filename}', 'w', encoding='utf-8')
     out = ''
 
     for sentence, prediction in zip(x_val, predictions):
