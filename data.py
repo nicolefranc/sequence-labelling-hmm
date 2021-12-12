@@ -1,5 +1,4 @@
 import numpy as np
-from tqdm import tqdm
 
 # DATASET
 # train - labelled training set, train
@@ -86,7 +85,6 @@ def export_predictions_from_list(x_val: list, predictions: list, lang: str, part
 
 def rnn_preprocess(x: list):
     ''' Extract unique words '''
-    # words = list(set([word for sentence in x for _, word in enumerate(sentence)]))
     all_words = []
     for sentence in x:
         for idx, word in enumerate(sentence):
@@ -94,27 +92,21 @@ def rnn_preprocess(x: list):
 
     words = list(set(all_words))
     num_of_unique_words = len(words)
-    # print('Number of unique words:', num_of_unique_words)
 
     word_to_idx = {}
     idx_to_word = {}
-    inputs = []
 
     for idx, word in enumerate(words):
         ''' Assign an id to word '''
         word_to_idx[word] = idx
         idx_to_word[idx] = word
 
-    # print(word_to_idx['disfrutemos'])
-    # print(idx_to_word[0])
-    # print(word_to_idx.items())
     return word_to_idx, idx_to_word, num_of_unique_words
 
 
 def rnn_inputs(sentence: str, word_to_idx: dict, num_of_unique_words: int):
     inputs = []
-    for idx, word in enumerate(sentence):
-        # print(f'word {idx} - {word}')
+    for _, word in enumerate(sentence):
         '''
         Create a vector of shape (num_of_unique_words, 1)
         - the value at position word_to_idx[word] in the vector should be 1
@@ -123,8 +115,6 @@ def rnn_inputs(sentence: str, word_to_idx: dict, num_of_unique_words: int):
         # get the index of the word, make the value of the vector at that index to 1
         vector[word_to_idx[word]] = 1
         inputs.append(vector)
-        # print(f'sentence {sentence}', sentence)
-        # print(f'vector {idx}:', vector.shape)
 
     return np.asarray(inputs)
 

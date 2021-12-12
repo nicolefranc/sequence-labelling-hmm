@@ -1,8 +1,5 @@
-from re import U
 from data import *
 from part1 import *
-from pprint import pprint
-from tqdm import tqdm
 
 
 class viterbi_node:
@@ -250,7 +247,7 @@ class part3:
     def viterbi(self, emission_class):
         predictions = []
 
-        for i in tqdm(range(len(self.x_val))):
+        for i in range(len(self.x_val)):
             pi5th, path5th = self.viterbi_per_sentence(
                 emission_class, self.x_val[i])
 

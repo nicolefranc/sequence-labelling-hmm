@@ -26,7 +26,7 @@ if __name__ == '__main__':
                  idx_to_word, num_of_unique_words)
 
     print("[RU] Training model...")
-    rnn_ru.train(x_ru, y_ru, 100)
+    rnn_ru.train(x_ru, y_ru, 1)
 
     # Dev Test
     # Español
